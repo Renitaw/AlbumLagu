@@ -55,9 +55,9 @@
             this.txtjudul = new System.Windows.Forms.TextBox();
             this.txtdurasi = new System.Windows.Forms.TextBox();
             this.txtgenre = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnadd = new System.Windows.Forms.Button();
+            this.btnsave = new System.Windows.Forms.Button();
+            this.btnclear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -315,41 +315,41 @@
             this.txtgenre.Size = new System.Drawing.Size(249, 26);
             this.txtgenre.TabIndex = 11;
             // 
-            // button1
+            // btnadd
             // 
-            this.button1.Location = new System.Drawing.Point(180, 367);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 31);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnadd.Location = new System.Drawing.Point(180, 367);
+            this.btnadd.Name = "btnadd";
+            this.btnadd.Size = new System.Drawing.Size(75, 31);
+            this.btnadd.TabIndex = 2;
+            this.btnadd.Text = "Add";
+            this.btnadd.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnsave
             // 
-            this.button2.Location = new System.Drawing.Point(365, 367);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 31);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Save";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnsave.Location = new System.Drawing.Point(365, 367);
+            this.btnsave.Name = "btnsave";
+            this.btnsave.Size = new System.Drawing.Size(75, 31);
+            this.btnsave.TabIndex = 3;
+            this.btnsave.Text = "Save";
+            this.btnsave.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnclear
             // 
-            this.button3.Location = new System.Drawing.Point(546, 367);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 31);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Clear";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnclear.Location = new System.Drawing.Point(546, 367);
+            this.btnclear.Name = "btnclear";
+            this.btnclear.Size = new System.Drawing.Size(75, 31);
+            this.btnclear.TabIndex = 4;
+            this.btnclear.Text = "Clear";
+            this.btnclear.UseVisualStyleBackColor = true;
             // 
             // DataLagu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnclear);
+            this.Controls.Add(this.btnsave);
+            this.Controls.Add(this.btnadd);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.bindingNavigator1);
             this.Name = "DataLagu";
@@ -391,8 +391,8 @@
         private System.Windows.Forms.TextBox txtjudul;
         private System.Windows.Forms.TextBox txtdurasi;
         private System.Windows.Forms.TextBox txtgenre;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnadd;
+        private System.Windows.Forms.Button btnsave;
+        private System.Windows.Forms.Button btnclear;
     }
 }
