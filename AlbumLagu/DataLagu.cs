@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AlbumLagu
 {
-    public partial class Form2 : Form
+    public partial class DataLagu : Form
     {
-        public Form2()
+        public DataLagu()
         {
             InitializeComponent();
         }
