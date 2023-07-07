@@ -64,8 +64,17 @@
     <Compile Include="DataLagu.Designer.cs">
       <DependentUpon>DataLagu.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataAlbum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataAlbum.Designer.cs">
+      <DependentUpon>DataAlbum.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DataAlbum.resx">
+      <DependentUpon>DataAlbum.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
