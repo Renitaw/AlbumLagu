@@ -16,5 +16,15 @@ namespace AlbumLagu
         {
             InitializeComponent();
         }
+
+        private void dataUtamaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataLaguToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
