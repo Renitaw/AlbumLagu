@@ -72,7 +72,21 @@ namespace AlbumLagu
 
         private void btnsave_Click(object sender, EventArgs e)
         {
+            idpencipta = txtidpencipta.Text;
+            namapencipta = txtnamapencipta.Text;
+            koneksi.Open();
+            string str = "insert into dbo.pencipta (id_pencipta, nama_pencipta)" +
+                "values(@IDpencipta, @Nm)";
+            SqlCommand cmd = new SqlCommand(str, koneksi);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add(new SqlParameter("@IDpencipta", idpencipta));
+            cmd.Parameters.Add(new SqlParameter("@Nm", namapencipta));
+            cmd.ExecuteNonQuery();
+            koneksi.Close();
 
+            MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            refreshform();
         }
 
         private void DataPencipta_Load(object sender, EventArgs e)
