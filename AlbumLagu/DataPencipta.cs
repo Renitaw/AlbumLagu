@@ -61,12 +61,18 @@ namespace AlbumLagu
 
         private void btnadd_Click(object sender, EventArgs e)
         {
-           
+            txtidpencipta.Text = "";
+            txtnamapencipta.Text = "";
+            txtidpencipta.Enabled = true;
+            txtnamapencipta.Enabled = true;
+            btnsave.Enabled = true;
+            btnclear.Enabled = true;
+            btnadd.Enabled = false;
         }
 
         private void btnsave_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void DataPencipta_Load(object sender, EventArgs e)
