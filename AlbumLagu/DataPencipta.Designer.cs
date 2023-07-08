@@ -51,6 +51,7 @@
             this.btnsave = new System.Windows.Forms.Button();
             this.btnclear = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnback = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -232,6 +233,7 @@
             this.btnadd.TabIndex = 2;
             this.btnadd.Text = "Add";
             this.btnadd.UseVisualStyleBackColor = true;
+            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
             // btnsave
             // 
@@ -241,6 +243,7 @@
             this.btnsave.TabIndex = 3;
             this.btnsave.Text = "Save";
             this.btnsave.UseVisualStyleBackColor = true;
+            this.btnsave.Click += new System.EventHandler(this.btnsave_Click);
             // 
             // btnclear
             // 
@@ -260,11 +263,21 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "DATA PENCIPTA";
             // 
+            // btnback
+            // 
+            this.btnback.Location = new System.Drawing.Point(13, 57);
+            this.btnback.Name = "btnback";
+            this.btnback.Size = new System.Drawing.Size(75, 30);
+            this.btnback.TabIndex = 6;
+            this.btnback.Text = "Back";
+            this.btnback.UseVisualStyleBackColor = true;
+            // 
             // DataPencipta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnback);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnclear);
             this.Controls.Add(this.btnsave);
@@ -307,5 +320,6 @@
         private System.Windows.Forms.Button btnsave;
         private System.Windows.Forms.Button btnclear;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnback;
     }
 }
