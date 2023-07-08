@@ -50,12 +50,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtidartis = new System.Windows.Forms.TextBox();
             this.txtnamaartis = new System.Windows.Forms.TextBox();
-            this.txttanggallahir = new System.Windows.Forms.TextBox();
             this.txtgenre = new System.Windows.Forms.TextBox();
             this.txtnotelepon = new System.Windows.Forms.TextBox();
             this.btnadd = new System.Windows.Forms.Button();
             this.btnsave = new System.Windows.Forms.Button();
             this.btnclear = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -188,9 +188,9 @@
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.txtidartis, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtnamaartis, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.txttanggallahir, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtgenre, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.txtnotelepon, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.dateTimePicker1, 1, 2);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(128, 72);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
@@ -272,16 +272,6 @@
             this.txtnamaartis.Size = new System.Drawing.Size(283, 26);
             this.txtnamaartis.TabIndex = 6;
             // 
-            // txttanggallahir
-            // 
-            this.txttanggallahir.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txttanggallahir.Location = new System.Drawing.Point(291, 107);
-            this.txttanggallahir.Name = "txttanggallahir";
-            this.txttanggallahir.Size = new System.Drawing.Size(283, 26);
-            this.txttanggallahir.TabIndex = 7;
-            // 
             // txtgenre
             // 
             this.txtgenre.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -329,6 +319,13 @@
             this.btnclear.Text = "Clear";
             this.btnclear.UseVisualStyleBackColor = true;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(291, 107);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(283, 26);
+            this.dateTimePicker1.TabIndex = 10;
+            // 
             // DataArtis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -373,11 +370,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtidartis;
         private System.Windows.Forms.TextBox txtnamaartis;
-        private System.Windows.Forms.TextBox txttanggallahir;
         private System.Windows.Forms.TextBox txtgenre;
         private System.Windows.Forms.TextBox txtnotelepon;
         private System.Windows.Forms.Button btnadd;
         private System.Windows.Forms.Button btnsave;
         private System.Windows.Forms.Button btnclear;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
