@@ -52,5 +52,26 @@ namespace AlbumLagu
             dpr.Show();
             this.Hide();
         }
+
+        private void dataLirikToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DataLirik dl = new DataLirik();
+            dl.Show();
+            this.Hide();
+        }
+
+        private void dataDaftarPutarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DataDaftarPutar dpt = new DataDaftarPutar();
+            dpt.Show();
+            this.Hide();
+        }
+
+        private void dataKontrakToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DataKontrak dk = new DataKontrak(); 
+            dk.Show();
+            this.Hide();
+        }
     }
 }

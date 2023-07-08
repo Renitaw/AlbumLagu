@@ -120,20 +120,23 @@
             // dataLirikToolStripMenuItem
             // 
             this.dataLirikToolStripMenuItem.Name = "dataLirikToolStripMenuItem";
-            this.dataLirikToolStripMenuItem.Size = new System.Drawing.Size(251, 34);
+            this.dataLirikToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.dataLirikToolStripMenuItem.Text = "Data Lirik ";
+            this.dataLirikToolStripMenuItem.Click += new System.EventHandler(this.dataLirikToolStripMenuItem_Click);
             // 
             // dataDaftarPutarToolStripMenuItem
             // 
             this.dataDaftarPutarToolStripMenuItem.Name = "dataDaftarPutarToolStripMenuItem";
-            this.dataDaftarPutarToolStripMenuItem.Size = new System.Drawing.Size(251, 34);
+            this.dataDaftarPutarToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.dataDaftarPutarToolStripMenuItem.Text = "Data Daftar Putar";
+            this.dataDaftarPutarToolStripMenuItem.Click += new System.EventHandler(this.dataDaftarPutarToolStripMenuItem_Click);
             // 
             // dataKontrakToolStripMenuItem
             // 
             this.dataKontrakToolStripMenuItem.Name = "dataKontrakToolStripMenuItem";
-            this.dataKontrakToolStripMenuItem.Size = new System.Drawing.Size(251, 34);
+            this.dataKontrakToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.dataKontrakToolStripMenuItem.Text = "Data Kontrak";
+            this.dataKontrakToolStripMenuItem.Click += new System.EventHandler(this.dataKontrakToolStripMenuItem_Click);
             // 
             // Form1
             // 
