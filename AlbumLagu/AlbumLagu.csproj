@@ -88,6 +88,12 @@
     <Compile Include="DataLirik.Designer.cs">
       <DependentUpon>DataLirik.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataDaftarPutar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataDaftarPutar.Designer.cs">
+      <DependentUpon>DataDaftarPutar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="DataAlbum.resx">
@@ -110,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DataLirik.resx">
       <DependentUpon>DataLirik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataDaftarPutar.resx">
+      <DependentUpon>DataDaftarPutar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
