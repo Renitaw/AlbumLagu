@@ -13,7 +13,7 @@ namespace AlbumLagu
 {
     public partial class DataPencipta : Form
     {
-        private string stringConnection = "data source=RENITAWIDIASTUT\\RENITAWDST;database=ALBUMLAGUUUAS;User ID=sa; Password=Rere2607";
+        private string stringConnection = "data source=RENITAWIDIASTUT\\RENITAWDST;database=ALBUMLAGUUAS;User ID=sa; Password=Rere2607";
         private SqlConnection koneksi;
         private string idpencipta, namapencipta;
         BindingSource customerBindingSource = new BindingSource();
@@ -34,7 +34,7 @@ namespace AlbumLagu
 
             this.customerBindingSource.DataSource = ds.Tables[0];
             this.txtidpencipta.DataBindings.Add(
-                new Binding("Text", this.customerBindingSource, "idpencipta", true));
+                new Binding("Text", this.customerBindingSource, "id_pencipta", true));
             this.txtnamapencipta.DataBindings.Add(
                 new Binding("Text", this.customerBindingSource, "nama_pencipta", true));
             koneksi.Close();
@@ -92,6 +92,13 @@ namespace AlbumLagu
         private void btnclear_Click(object sender, EventArgs e)
         {
             refreshform();
+        }
+
+        private void btnback_Click(object sender, EventArgs e)
+        {
+            Form1 frm = new Form1();
+            frm.Show();
+            this.Hide();
         }
 
         private void DataPencipta_Load(object sender, EventArgs e)

@@ -272,6 +272,7 @@
             this.btnback.TabIndex = 6;
             this.btnback.Text = "Back";
             this.btnback.UseVisualStyleBackColor = true;
+            this.btnback.Click += new System.EventHandler(this.btnback_Click);
             // 
             // DataPencipta
             // 
