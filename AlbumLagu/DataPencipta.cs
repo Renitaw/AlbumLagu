@@ -50,7 +50,13 @@ namespace AlbumLagu
 
         private void refreshform()
         {
-           
+            txtidpencipta.Enabled = false;
+            txtnamapencipta.Enabled = false;
+            btnsave.Enabled = false;
+            btnclear.Enabled = false;
+            clearBinding();
+            DataPencipta_Load();
+
         }
 
         private void btnadd_Click(object sender, EventArgs e)
