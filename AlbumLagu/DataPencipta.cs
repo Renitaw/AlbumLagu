@@ -27,7 +27,18 @@ namespace AlbumLagu
 
         private void DataPencipta_Load()
         {
-            
+            koneksi.Open(); 
+            SqlDataAdapter dataAdapter1 = new SqlDataAdapter(new SqlCommand("Select id_pencipta, nama_pencipta from dbo.pencipta", koneksi));
+            DataSet ds = new DataSet();
+            dataAdapter1.Fill(ds);
+
+            this.customerBindingSource.DataSource = ds.Tables[0];
+            this.txtidpencipta.DataBindings.Add(
+                new Binding("Text", this.customerBindingSource, "idpencipta", true));
+            this.txtnamapencipta.DataBindings.Add(
+                new Binding("Text", this.customerBindingSource, "nama_pencipta", true));
+            koneksi.Close();
+
         }
 
         private void clearBinding()
