@@ -56,6 +56,7 @@
             this.btnadd = new System.Windows.Forms.Button();
             this.btnsave = new System.Windows.Forms.Button();
             this.btnclear = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -191,7 +192,7 @@
             this.tableLayoutPanel1.Controls.Add(this.txtperusahaan, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.txttalamat, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.txtnotelepon, 1, 4);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(127, 58);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(134, 136);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -304,7 +305,7 @@
             // 
             // btnadd
             // 
-            this.btnadd.Location = new System.Drawing.Point(163, 336);
+            this.btnadd.Location = new System.Drawing.Point(150, 396);
             this.btnadd.Name = "btnadd";
             this.btnadd.Size = new System.Drawing.Size(75, 42);
             this.btnadd.TabIndex = 2;
@@ -313,7 +314,7 @@
             // 
             // btnsave
             // 
-            this.btnsave.Location = new System.Drawing.Point(377, 337);
+            this.btnsave.Location = new System.Drawing.Point(364, 397);
             this.btnsave.Name = "btnsave";
             this.btnsave.Size = new System.Drawing.Size(75, 43);
             this.btnsave.TabIndex = 3;
@@ -322,25 +323,36 @@
             // 
             // btnclear
             // 
-            this.btnclear.Location = new System.Drawing.Point(582, 338);
+            this.btnclear.Location = new System.Drawing.Point(611, 396);
             this.btnclear.Name = "btnclear";
             this.btnclear.Size = new System.Drawing.Size(75, 42);
             this.btnclear.TabIndex = 4;
             this.btnclear.Text = "Clear";
             this.btnclear.UseVisualStyleBackColor = true;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(345, 72);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(148, 20);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "DATA PRODUSER";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
             // DataProduser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.btnclear);
             this.Controls.Add(this.btnsave);
             this.Controls.Add(this.btnadd);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.bindingNavigator1);
             this.Name = "DataProduser";
-            this.Text = "Data Produser";
+            this.Text = "Produser";
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
@@ -379,5 +391,6 @@
         private System.Windows.Forms.Button btnadd;
         private System.Windows.Forms.Button btnsave;
         private System.Windows.Forms.Button btnclear;
+        private System.Windows.Forms.Label label6;
     }
 }

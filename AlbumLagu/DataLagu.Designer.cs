@@ -58,6 +58,7 @@
             this.btnadd = new System.Windows.Forms.Button();
             this.btnsave = new System.Windows.Forms.Button();
             this.btnclear = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -88,7 +89,7 @@
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(800, 38);
+            this.bindingNavigator1.Size = new System.Drawing.Size(800, 33);
             this.bindingNavigator1.TabIndex = 0;
             // 
             // bindingNavigatorAddNewItem
@@ -97,7 +98,7 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
             // bindingNavigatorCountItem
@@ -194,7 +195,7 @@
             this.tableLayoutPanel1.Controls.Add(this.txtjudul, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.txtdurasi, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.txtgenre, 1, 5);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(160, 57);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(150, 99);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.83544F));
@@ -317,7 +318,7 @@
             // 
             // btnadd
             // 
-            this.btnadd.Location = new System.Drawing.Point(180, 367);
+            this.btnadd.Location = new System.Drawing.Point(182, 398);
             this.btnadd.Name = "btnadd";
             this.btnadd.Size = new System.Drawing.Size(75, 31);
             this.btnadd.TabIndex = 2;
@@ -326,7 +327,7 @@
             // 
             // btnsave
             // 
-            this.btnsave.Location = new System.Drawing.Point(365, 367);
+            this.btnsave.Location = new System.Drawing.Point(360, 398);
             this.btnsave.Name = "btnsave";
             this.btnsave.Size = new System.Drawing.Size(75, 31);
             this.btnsave.TabIndex = 3;
@@ -335,25 +336,35 @@
             // 
             // btnclear
             // 
-            this.btnclear.Location = new System.Drawing.Point(546, 367);
+            this.btnclear.Location = new System.Drawing.Point(549, 398);
             this.btnclear.Name = "btnclear";
             this.btnclear.Size = new System.Drawing.Size(75, 31);
             this.btnclear.TabIndex = 4;
             this.btnclear.Text = "Clear";
             this.btnclear.UseVisualStyleBackColor = true;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(356, 61);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(101, 20);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "DATA LAGU";
+            // 
             // DataLagu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.btnclear);
             this.Controls.Add(this.btnsave);
             this.Controls.Add(this.btnadd);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.bindingNavigator1);
             this.Name = "DataLagu";
-            this.Text = "Data Lagu";
+            this.Text = "Lagu";
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
@@ -394,5 +405,6 @@
         private System.Windows.Forms.Button btnadd;
         private System.Windows.Forms.Button btnsave;
         private System.Windows.Forms.Button btnclear;
+        private System.Windows.Forms.Label label7;
     }
 }

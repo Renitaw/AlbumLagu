@@ -45,6 +45,7 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.btnopen = new System.Windows.Forms.Button();
+            this.btnback = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -190,11 +191,21 @@
             this.btnopen.Text = "Open";
             this.btnopen.UseVisualStyleBackColor = true;
             // 
+            // btnback
+            // 
+            this.btnback.Location = new System.Drawing.Point(121, 24);
+            this.btnback.Name = "btnback";
+            this.btnback.Size = new System.Drawing.Size(75, 36);
+            this.btnback.TabIndex = 19;
+            this.btnback.Text = "Back";
+            this.btnback.UseVisualStyleBackColor = true;
+            // 
             // DataKontrak
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(895, 529);
+            this.ClientSize = new System.Drawing.Size(864, 529);
+            this.Controls.Add(this.btnback);
             this.Controls.Add(this.btnopen);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
@@ -239,5 +250,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Button btnopen;
+        private System.Windows.Forms.Button btnback;
     }
 }

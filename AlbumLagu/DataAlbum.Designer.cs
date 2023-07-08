@@ -60,6 +60,7 @@
             this.btnadd = new System.Windows.Forms.Button();
             this.btnsave = new System.Windows.Forms.Button();
             this.btnclear = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -90,7 +91,7 @@
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(800, 33);
+            this.bindingNavigator1.Size = new System.Drawing.Size(800, 38);
             this.bindingNavigator1.TabIndex = 0;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -100,7 +101,7 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
             // bindingNavigatorCountItem
@@ -199,7 +200,7 @@
             this.tableLayoutPanel1.Controls.Add(this.txtperusahaan, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.txttahunrilis, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.txtgenre, 1, 6);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(152, 58);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(145, 99);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 43.47826F));
@@ -355,7 +356,7 @@
             // 
             // btnadd
             // 
-            this.btnadd.Location = new System.Drawing.Point(201, 385);
+            this.btnadd.Location = new System.Drawing.Point(167, 402);
             this.btnadd.Name = "btnadd";
             this.btnadd.Size = new System.Drawing.Size(75, 36);
             this.btnadd.TabIndex = 2;
@@ -364,7 +365,7 @@
             // 
             // btnsave
             // 
-            this.btnsave.Location = new System.Drawing.Point(377, 385);
+            this.btnsave.Location = new System.Drawing.Point(372, 402);
             this.btnsave.Name = "btnsave";
             this.btnsave.Size = new System.Drawing.Size(75, 36);
             this.btnsave.TabIndex = 3;
@@ -373,25 +374,35 @@
             // 
             // btnclear
             // 
-            this.btnclear.Location = new System.Drawing.Point(564, 385);
+            this.btnclear.Location = new System.Drawing.Point(577, 402);
             this.btnclear.Name = "btnclear";
             this.btnclear.Size = new System.Drawing.Size(75, 36);
             this.btnclear.TabIndex = 4;
             this.btnclear.Text = "Clear";
             this.btnclear.UseVisualStyleBackColor = true;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(368, 58);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(112, 20);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "DATA ALBUM";
+            // 
             // DataAlbum
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.btnclear);
             this.Controls.Add(this.btnsave);
             this.Controls.Add(this.btnadd);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.bindingNavigator1);
             this.Name = "DataAlbum";
-            this.Text = "Data Album";
+            this.Text = "Album";
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
@@ -434,5 +445,6 @@
         private System.Windows.Forms.Button btnadd;
         private System.Windows.Forms.Button btnsave;
         private System.Windows.Forms.Button btnclear;
+        private System.Windows.Forms.Label label8;
     }
 }

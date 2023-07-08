@@ -41,6 +41,7 @@
             this.btnsave = new System.Windows.Forms.Button();
             this.btnclear = new System.Windows.Forms.Button();
             this.btnopen = new System.Windows.Forms.Button();
+            this.btnback = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -154,11 +155,21 @@
             this.btnopen.Text = "Open";
             this.btnopen.UseVisualStyleBackColor = true;
             // 
-            // Form3
+            // btnback
+            // 
+            this.btnback.Location = new System.Drawing.Point(108, 30);
+            this.btnback.Name = "btnback";
+            this.btnback.Size = new System.Drawing.Size(75, 27);
+            this.btnback.TabIndex = 13;
+            this.btnback.Text = "Back";
+            this.btnback.UseVisualStyleBackColor = true;
+            // 
+            // DataDaftarPutar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnback);
             this.Controls.Add(this.btnopen);
             this.Controls.Add(this.btnclear);
             this.Controls.Add(this.btnsave);
@@ -172,7 +183,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "Form3";
+            this.Name = "DataDaftarPutar";
             this.Text = "Data Daftar Putar";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -195,5 +206,6 @@
         private System.Windows.Forms.Button btnsave;
         private System.Windows.Forms.Button btnclear;
         private System.Windows.Forms.Button btnopen;
+        private System.Windows.Forms.Button btnback;
     }
 }

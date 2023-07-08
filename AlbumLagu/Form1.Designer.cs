@@ -31,11 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.dataUtamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataPenciptaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataLaguToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataArtisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataProduserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.datapencipta = new System.Windows.Forms.ToolStripMenuItem();
+            this.datalagu = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataalbum = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataartis = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataproduser = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
             this.dataLirikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataDaftarPutarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,47 +59,50 @@
             // 
             this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dataUtamaToolStripMenuItem,
-            this.dataPenciptaToolStripMenuItem,
-            this.dataLaguToolStripMenuItem,
-            this.dataArtisToolStripMenuItem,
-            this.dataProduserToolStripMenuItem});
+            this.datapencipta,
+            this.datalagu,
+            this.dataalbum,
+            this.dataartis,
+            this.dataproduser});
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
             this.toolStripDropDownButton1.Size = new System.Drawing.Size(124, 29);
             this.toolStripDropDownButton1.Text = "Data Utama";
             // 
-            // dataUtamaToolStripMenuItem
+            // datapencipta
             // 
-            this.dataUtamaToolStripMenuItem.Name = "dataUtamaToolStripMenuItem";
-            this.dataUtamaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.dataUtamaToolStripMenuItem.Text = "Data Pencipta";
-            this.dataUtamaToolStripMenuItem.Click += new System.EventHandler(this.dataUtamaToolStripMenuItem_Click);
+            this.datapencipta.Name = "datapencipta";
+            this.datapencipta.Size = new System.Drawing.Size(270, 34);
+            this.datapencipta.Text = "Data Pencipta";
+            this.datapencipta.Click += new System.EventHandler(this.dataUtamaToolStripMenuItem_Click);
             // 
-            // dataPenciptaToolStripMenuItem
+            // datalagu
             // 
-            this.dataPenciptaToolStripMenuItem.Name = "dataPenciptaToolStripMenuItem";
-            this.dataPenciptaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.dataPenciptaToolStripMenuItem.Text = "Data Lagu";
+            this.datalagu.Name = "datalagu";
+            this.datalagu.Size = new System.Drawing.Size(270, 34);
+            this.datalagu.Text = "Data Lagu";
+            this.datalagu.Click += new System.EventHandler(this.dataPenciptaToolStripMenuItem_Click);
             // 
-            // dataLaguToolStripMenuItem
+            // dataalbum
             // 
-            this.dataLaguToolStripMenuItem.Name = "dataLaguToolStripMenuItem";
-            this.dataLaguToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.dataLaguToolStripMenuItem.Text = "Data Album";
-            this.dataLaguToolStripMenuItem.Click += new System.EventHandler(this.dataLaguToolStripMenuItem_Click);
+            this.dataalbum.Name = "dataalbum";
+            this.dataalbum.Size = new System.Drawing.Size(270, 34);
+            this.dataalbum.Text = "Data Album";
+            this.dataalbum.Click += new System.EventHandler(this.dataLaguToolStripMenuItem_Click);
             // 
-            // dataArtisToolStripMenuItem
+            // dataartis
             // 
-            this.dataArtisToolStripMenuItem.Name = "dataArtisToolStripMenuItem";
-            this.dataArtisToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.dataArtisToolStripMenuItem.Text = "Data Artis";
+            this.dataartis.Name = "dataartis";
+            this.dataartis.Size = new System.Drawing.Size(270, 34);
+            this.dataartis.Text = "Data Artis";
+            this.dataartis.Click += new System.EventHandler(this.dataArtisToolStripMenuItem_Click);
             // 
-            // dataProduserToolStripMenuItem
+            // dataproduser
             // 
-            this.dataProduserToolStripMenuItem.Name = "dataProduserToolStripMenuItem";
-            this.dataProduserToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.dataProduserToolStripMenuItem.Text = "Data Produser";
+            this.dataproduser.Name = "dataproduser";
+            this.dataproduser.Size = new System.Drawing.Size(270, 34);
+            this.dataproduser.Text = "Data Produser";
+            this.dataproduser.Click += new System.EventHandler(this.dataProduserToolStripMenuItem_Click);
             // 
             // toolStripDropDownButton2
             // 
@@ -117,19 +120,19 @@
             // dataLirikToolStripMenuItem
             // 
             this.dataLirikToolStripMenuItem.Name = "dataLirikToolStripMenuItem";
-            this.dataLirikToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.dataLirikToolStripMenuItem.Size = new System.Drawing.Size(251, 34);
             this.dataLirikToolStripMenuItem.Text = "Data Lirik ";
             // 
             // dataDaftarPutarToolStripMenuItem
             // 
             this.dataDaftarPutarToolStripMenuItem.Name = "dataDaftarPutarToolStripMenuItem";
-            this.dataDaftarPutarToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.dataDaftarPutarToolStripMenuItem.Size = new System.Drawing.Size(251, 34);
             this.dataDaftarPutarToolStripMenuItem.Text = "Data Daftar Putar";
             // 
             // dataKontrakToolStripMenuItem
             // 
             this.dataKontrakToolStripMenuItem.Name = "dataKontrakToolStripMenuItem";
-            this.dataKontrakToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.dataKontrakToolStripMenuItem.Size = new System.Drawing.Size(251, 34);
             this.dataKontrakToolStripMenuItem.Text = "Data Kontrak";
             // 
             // Form1
@@ -152,11 +155,11 @@
 
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
-        private System.Windows.Forms.ToolStripMenuItem dataUtamaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dataPenciptaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dataLaguToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dataArtisToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dataProduserToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem datapencipta;
+        private System.Windows.Forms.ToolStripMenuItem datalagu;
+        private System.Windows.Forms.ToolStripMenuItem dataalbum;
+        private System.Windows.Forms.ToolStripMenuItem dataartis;
+        private System.Windows.Forms.ToolStripMenuItem dataproduser;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton2;
         private System.Windows.Forms.ToolStripMenuItem dataLirikToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dataDaftarPutarToolStripMenuItem;

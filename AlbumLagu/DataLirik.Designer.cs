@@ -41,6 +41,7 @@
             this.btnsave = new System.Windows.Forms.Button();
             this.btnclear = new System.Windows.Forms.Button();
             this.btnopen = new System.Windows.Forms.Button();
+            this.btnback = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -154,11 +155,21 @@
             this.btnopen.Text = "Open";
             this.btnopen.UseVisualStyleBackColor = true;
             // 
+            // btnback
+            // 
+            this.btnback.Location = new System.Drawing.Point(87, 36);
+            this.btnback.Name = "btnback";
+            this.btnback.Size = new System.Drawing.Size(75, 31);
+            this.btnback.TabIndex = 13;
+            this.btnback.Text = "Back";
+            this.btnback.UseVisualStyleBackColor = true;
+            // 
             // DataLirik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnback);
             this.Controls.Add(this.btnopen);
             this.Controls.Add(this.btnclear);
             this.Controls.Add(this.btnsave);
@@ -195,5 +206,6 @@
         private System.Windows.Forms.Button btnsave;
         private System.Windows.Forms.Button btnclear;
         private System.Windows.Forms.Button btnopen;
+        private System.Windows.Forms.Button btnback;
     }
 }
