@@ -89,6 +89,11 @@ namespace AlbumLagu
             refreshform();
         }
 
+        private void btnclear_Click(object sender, EventArgs e)
+        {
+            refreshform();
+        }
+
         private void DataPencipta_Load(object sender, EventArgs e)
         {
 
