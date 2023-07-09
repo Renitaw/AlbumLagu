@@ -52,6 +52,27 @@ namespace AlbumLagu
             refreshform();
         }
 
+        private void btnadd_Click(object sender, EventArgs e)
+        {
+            txtidalbum.Text = "";
+            txtnamaalbum.Text = "";
+            txtidartis.Text = "";
+            txtidlagu.Text = "";
+            txtperusahaan.Text = "";
+            txttahunrilis.Text = "";
+            txtgenre.Text = "";
+            txtidalbum.Enabled = true;
+            txtnamaalbum.Enabled = true;
+            txtidartis.Enabled = true;
+            txtidlagu.Enabled = true;
+            txtperusahaan.Enabled = true;
+            txttahunrilis.Enabled = true;
+            txtgenre.Enabled = true;
+            btnsave.Enabled = true;
+            btnclear.Enabled = true;
+            btnadd.Enabled = false;
+        }
+
         public DataAlbum()
         {
             InitializeComponent();
