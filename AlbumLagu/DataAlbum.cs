@@ -20,6 +20,15 @@ namespace AlbumLagu
         public DataAlbum()
         {
             InitializeComponent();
+            koneksi = new SqlConnection(stringConnection);
+            this.bindingNavigator1.BindingSource = this.customerBindingSource;
+            refreshform();
+        }
+
+        private void refreshform()
+        {
+
+
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
