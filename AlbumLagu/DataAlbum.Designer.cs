@@ -201,7 +201,7 @@
             this.tableLayoutPanel1.Controls.Add(this.txtperusahaan, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.txttahunrilis, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.txtgenre, 1, 6);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(145, 99);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(144, 81);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 43.47826F));
@@ -385,7 +385,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(368, 58);
+            this.label8.Location = new System.Drawing.Point(368, 54);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(112, 20);
             this.label8.TabIndex = 5;
@@ -414,6 +414,7 @@
             this.Controls.Add(this.bindingNavigator1);
             this.Name = "DataAlbum";
             this.Text = "Album";
+            this.Load += new System.EventHandler(this.DataAlbum_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
