@@ -49,6 +49,17 @@ namespace AlbumLagu
 
         }
 
+        private void clearBinding()
+        {
+            this.txtidalbum.DataBindings.Clear();
+            this.txtnamaalbum.DataBindings.Clear();
+            this.txtidartis.DataBindings.Clear();
+            this.txtidlagu.DataBindings.Clear();
+            this.txtperusahaan.DataBindings.Clear();
+            this.txttahunrilis.DataBindings.Clear();
+
+        }
+
         private void refreshform()
         {
 
