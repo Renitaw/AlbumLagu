@@ -62,6 +62,17 @@ namespace AlbumLagu
 
         private void refreshform()
         {
+            txtidalbum.Enabled = false;
+            txtnamaalbum.Enabled = false;
+            txtidartis.Enabled = false;
+            txtidlagu.Enabled = false;
+            txtperusahaan.Enabled = false;
+            txttahunrilis.Enabled = false;
+            txtgenre.Enabled = false;
+            btnsave.Enabled = false;
+            btnclear.Enabled = false;
+            clearBinding();
+            DataAlbum_Load();
 
 
         }
