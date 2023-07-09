@@ -17,6 +17,12 @@ namespace AlbumLagu
         private SqlConnection koneksi;
         private string idalbum, namaalbum, idartis, idlagu, perusahaan, tahunrilis, genre;
         BindingSource customerBindingSource = new BindingSource();
+
+        private void btnclear_Click(object sender, EventArgs e)
+        {
+            refreshform();
+        }
+
         public DataAlbum()
         {
             InitializeComponent();
