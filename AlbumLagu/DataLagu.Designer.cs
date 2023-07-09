@@ -365,6 +365,7 @@
             this.Controls.Add(this.bindingNavigator1);
             this.Name = "DataLagu";
             this.Text = "Lagu";
+            this.Load += new System.EventHandler(this.DataLagu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
