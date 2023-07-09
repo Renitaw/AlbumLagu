@@ -65,6 +65,25 @@ namespace AlbumLagu
 
         }
 
+        private void btnadd_Click(object sender, EventArgs e)
+        {
+            txtidlagu.Text = "";
+            txtidartis.Text = "";
+            txtidproduser.Text = "";
+            txtjudul.Text = "";
+            txtdurasi.Text = "";
+            txtgenre.Text = "";
+            txtidlagu.Enabled = true;
+            txtidartis.Enabled = true;
+            txtidproduser.Enabled = true;
+            txtjudul.Enabled = true;
+            txtdurasi.Enabled = true;
+            txtgenre.Enabled = true;
+            btnsave.Enabled = true;
+            btnclear.Enabled = true;
+            btnadd.Enabled = false;
+        }
+
         private void refreshform()
         {
             txtidlagu.Enabled = false;
