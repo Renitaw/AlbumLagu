@@ -59,6 +59,7 @@
             this.btnsave = new System.Windows.Forms.Button();
             this.btnclear = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnback = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -355,11 +356,21 @@
             this.label7.TabIndex = 5;
             this.label7.Text = "DATA LAGU";
             // 
+            // btnback
+            // 
+            this.btnback.Location = new System.Drawing.Point(13, 57);
+            this.btnback.Name = "btnback";
+            this.btnback.Size = new System.Drawing.Size(75, 35);
+            this.btnback.TabIndex = 6;
+            this.btnback.Text = "Back";
+            this.btnback.UseVisualStyleBackColor = true;
+            // 
             // DataLagu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnback);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnclear);
             this.Controls.Add(this.btnsave);
@@ -410,5 +421,6 @@
         private System.Windows.Forms.Button btnsave;
         private System.Windows.Forms.Button btnclear;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnback;
     }
 }
