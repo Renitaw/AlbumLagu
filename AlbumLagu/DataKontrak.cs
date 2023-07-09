@@ -20,6 +20,8 @@ namespace AlbumLagu
         public DataKontrak()
         {
             InitializeComponent();
+            koneksi = new SqlConnection(stringConnection);
+            refreshform();
         }
         private void DataKontrak_Load()
         {
