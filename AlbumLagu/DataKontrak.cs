@@ -21,10 +21,19 @@ namespace AlbumLagu
         {
             InitializeComponent();
         }
+        
 
         private void DataKontrak_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void clearBinding()
+        {
+            this.txtidartis.DataBindings.Clear();
+            this.txtidkontrak.DataBindings.Clear();
+            this.txtidproduser.DataBindings.Clear();
+            this.txtnilaikontrak.DataBindings.Clear();
         }
     }
 }
