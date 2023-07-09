@@ -44,7 +44,7 @@ namespace AlbumLagu
         private void clearBinding()
         {
             this.txtidpencipta.DataBindings.Clear();
-            this.txtnamapencipta.Clear();
+            this.txtnamapencipta.DataBindings.Clear();
 
         }
 
