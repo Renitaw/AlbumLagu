@@ -49,6 +49,17 @@ namespace AlbumLagu
 
         }
 
+        private void clearBinding()
+        {
+            this.txtidlagu.DataBindings.Clear();
+            this.txtidartis.DataBindings.Clear();
+            this.txtidproduser.DataBindings.Clear();
+            this.txtjudul.DataBindings.Clear();
+            this.txtdurasi.DataBindings.Clear();
+            this.txtgenre.DataBindings.Clear();
+
+        }
+
         private void DataLagu_Load(object sender, EventArgs e)
         {
 
