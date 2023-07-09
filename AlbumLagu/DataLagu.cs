@@ -15,7 +15,7 @@ namespace AlbumLagu
     {
         private string stringConnection = "data source=RENITAWIDIASTUT\\RENITAWDST;database=ALBUMLAGUUAS;User ID=sa; Password=Rere2607";
         private SqlConnection koneksi;
-        private string idpencipta, namapencipta;
+        private string idlagu, idartis, idproduser, judul, durasi, genre;
         BindingSource customerBindingSource = new BindingSource();
         public DataLagu()
         {
@@ -82,6 +82,33 @@ namespace AlbumLagu
             btnsave.Enabled = true;
             btnclear.Enabled = true;
             btnadd.Enabled = false;
+        }
+
+        private void btnsave_Click(object sender, EventArgs e)
+        {
+            idlagu = txtidlagu.Text;
+            idartis = txtidartis.Text;
+            idproduser = txtidproduser.Text;
+            judul = txtjudul.Text;
+            durasi = txtdurasi.Text;
+            genre = txtgenre.Text;
+            koneksi.Open();
+            string str = "insert into dbo.lagu (id_lagu, id_artis, id_produser, judul, durasi, genre)" +
+                "values(@IDlagu, @IDartis, @IDproduser, @jdl, @drs, @gnr)";
+            SqlCommand cmd = new SqlCommand(str, koneksi);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add(new SqlParameter("@IDlagu", idlagu));
+            cmd.Parameters.Add(new SqlParameter("@IDartis", idartis));
+            cmd.Parameters.Add(new SqlParameter("@IDproduser", idproduser));
+            cmd.Parameters.Add(new SqlParameter("@jdl", judul));
+            cmd.Parameters.Add(new SqlParameter("@drs", durasi));
+            cmd.Parameters.Add(new SqlParameter("@gnr", genre));
+            cmd.ExecuteNonQuery();
+            koneksi.Close();
+
+            MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            refreshform();
         }
 
         private void refreshform()
