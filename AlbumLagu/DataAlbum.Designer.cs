@@ -61,6 +61,7 @@
             this.btnsave = new System.Windows.Forms.Button();
             this.btnclear = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
+            this.btnback = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -91,7 +92,7 @@
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(800, 38);
+            this.bindingNavigator1.Size = new System.Drawing.Size(800, 33);
             this.bindingNavigator1.TabIndex = 0;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -101,7 +102,7 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
             // bindingNavigatorCountItem
@@ -390,11 +391,21 @@
             this.label8.TabIndex = 5;
             this.label8.Text = "DATA ALBUM";
             // 
+            // btnback
+            // 
+            this.btnback.Location = new System.Drawing.Point(24, 54);
+            this.btnback.Name = "btnback";
+            this.btnback.Size = new System.Drawing.Size(75, 38);
+            this.btnback.TabIndex = 6;
+            this.btnback.Text = "Back";
+            this.btnback.UseVisualStyleBackColor = true;
+            // 
             // DataAlbum
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnback);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnclear);
             this.Controls.Add(this.btnsave);
@@ -446,5 +457,6 @@
         private System.Windows.Forms.Button btnsave;
         private System.Windows.Forms.Button btnclear;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnback;
     }
 }
