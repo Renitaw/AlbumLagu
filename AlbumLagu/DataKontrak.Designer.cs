@@ -52,159 +52,177 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(217, 24);
+            this.dataGridView1.Location = new System.Drawing.Point(145, 16);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(404, 190);
+            this.dataGridView1.Size = new System.Drawing.Size(269, 123);
             this.dataGridView1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(213, 239);
+            this.label1.Location = new System.Drawing.Point(142, 155);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 20);
+            this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "ID Kontrak";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(213, 270);
+            this.label2.Location = new System.Drawing.Point(142, 175);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 20);
+            this.label2.Size = new System.Drawing.Size(41, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "ID Artis";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(213, 303);
+            this.label3.Location = new System.Drawing.Point(142, 197);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 20);
+            this.label3.Size = new System.Drawing.Size(63, 13);
             this.label3.TabIndex = 3;
             this.label3.Text = "ID Produser";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(213, 333);
+            this.label4.Location = new System.Drawing.Point(142, 216);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 20);
+            this.label4.Size = new System.Drawing.Size(72, 13);
             this.label4.TabIndex = 4;
             this.label4.Text = "Tanggal Lahir";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(213, 364);
+            this.label5.Location = new System.Drawing.Point(142, 237);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(129, 20);
+            this.label5.Size = new System.Drawing.Size(88, 13);
             this.label5.TabIndex = 5;
             this.label5.Text = "Tanggal Berakhir";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(213, 396);
+            this.label6.Location = new System.Drawing.Point(142, 257);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(97, 20);
+            this.label6.Size = new System.Drawing.Size(67, 13);
             this.label6.TabIndex = 6;
             this.label6.Text = "Nilai Kontrak";
             // 
             // txtidkontrak
             // 
-            this.txtidkontrak.Location = new System.Drawing.Point(348, 239);
+            this.txtidkontrak.Location = new System.Drawing.Point(232, 155);
+            this.txtidkontrak.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtidkontrak.Name = "txtidkontrak";
-            this.txtidkontrak.Size = new System.Drawing.Size(273, 26);
+            this.txtidkontrak.Size = new System.Drawing.Size(183, 20);
             this.txtidkontrak.TabIndex = 7;
             // 
             // txtidartis
             // 
-            this.txtidartis.Location = new System.Drawing.Point(348, 271);
+            this.txtidartis.Location = new System.Drawing.Point(232, 176);
+            this.txtidartis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtidartis.Name = "txtidartis";
-            this.txtidartis.Size = new System.Drawing.Size(273, 26);
+            this.txtidartis.Size = new System.Drawing.Size(183, 20);
             this.txtidartis.TabIndex = 8;
             // 
             // txtidproduser
             // 
-            this.txtidproduser.Location = new System.Drawing.Point(348, 301);
+            this.txtidproduser.Location = new System.Drawing.Point(232, 196);
+            this.txtidproduser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtidproduser.Name = "txtidproduser";
-            this.txtidproduser.Size = new System.Drawing.Size(273, 26);
+            this.txtidproduser.Size = new System.Drawing.Size(183, 20);
             this.txtidproduser.TabIndex = 9;
             // 
             // txtnilaikontrak
             // 
-            this.txtnilaikontrak.Location = new System.Drawing.Point(348, 396);
+            this.txtnilaikontrak.Location = new System.Drawing.Point(232, 257);
+            this.txtnilaikontrak.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtnilaikontrak.Name = "txtnilaikontrak";
-            this.txtnilaikontrak.Size = new System.Drawing.Size(273, 26);
+            this.txtnilaikontrak.Size = new System.Drawing.Size(183, 20);
             this.txtnilaikontrak.TabIndex = 12;
             // 
             // btnadd
             // 
-            this.btnadd.Location = new System.Drawing.Point(217, 454);
+            this.btnadd.Location = new System.Drawing.Point(145, 295);
+            this.btnadd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnadd.Name = "btnadd";
-            this.btnadd.Size = new System.Drawing.Size(75, 29);
+            this.btnadd.Size = new System.Drawing.Size(50, 19);
             this.btnadd.TabIndex = 13;
             this.btnadd.Text = "Add";
             this.btnadd.UseVisualStyleBackColor = true;
             // 
             // btnsave
             // 
-            this.btnsave.Location = new System.Drawing.Point(379, 454);
+            this.btnsave.Location = new System.Drawing.Point(253, 295);
+            this.btnsave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnsave.Name = "btnsave";
-            this.btnsave.Size = new System.Drawing.Size(75, 29);
+            this.btnsave.Size = new System.Drawing.Size(50, 19);
             this.btnsave.TabIndex = 14;
             this.btnsave.Text = "Save";
             this.btnsave.UseVisualStyleBackColor = true;
             // 
             // btnclear
             // 
-            this.btnclear.Location = new System.Drawing.Point(546, 454);
+            this.btnclear.Location = new System.Drawing.Point(364, 295);
+            this.btnclear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnclear.Name = "btnclear";
-            this.btnclear.Size = new System.Drawing.Size(75, 29);
+            this.btnclear.Size = new System.Drawing.Size(50, 19);
             this.btnclear.TabIndex = 15;
             this.btnclear.Text = "Clear";
             this.btnclear.UseVisualStyleBackColor = true;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(348, 333);
+            this.dateTimePicker1.Location = new System.Drawing.Point(232, 216);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(273, 26);
+            this.dateTimePicker1.Size = new System.Drawing.Size(183, 20);
             this.dateTimePicker1.TabIndex = 16;
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(348, 365);
+            this.dateTimePicker2.Location = new System.Drawing.Point(232, 237);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(273, 26);
+            this.dateTimePicker2.Size = new System.Drawing.Size(183, 20);
             this.dateTimePicker2.TabIndex = 17;
             // 
             // btnopen
             // 
-            this.btnopen.Location = new System.Drawing.Point(646, 24);
+            this.btnopen.Location = new System.Drawing.Point(431, 16);
+            this.btnopen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnopen.Name = "btnopen";
-            this.btnopen.Size = new System.Drawing.Size(75, 36);
+            this.btnopen.Size = new System.Drawing.Size(50, 23);
             this.btnopen.TabIndex = 18;
             this.btnopen.Text = "Open";
             this.btnopen.UseVisualStyleBackColor = true;
             // 
             // btnback
             // 
-            this.btnback.Location = new System.Drawing.Point(121, 24);
+            this.btnback.Location = new System.Drawing.Point(81, 16);
+            this.btnback.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnback.Name = "btnback";
-            this.btnback.Size = new System.Drawing.Size(75, 36);
+            this.btnback.Size = new System.Drawing.Size(50, 23);
             this.btnback.TabIndex = 19;
             this.btnback.Text = "Back";
             this.btnback.UseVisualStyleBackColor = true;
             // 
             // DataKontrak
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(864, 529);
+            this.ClientSize = new System.Drawing.Size(576, 344);
             this.Controls.Add(this.btnback);
             this.Controls.Add(this.btnopen);
             this.Controls.Add(this.dateTimePicker2);
@@ -223,8 +241,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "DataKontrak";
             this.Text = "Data Kontrak";
+            this.Load += new System.EventHandler(this.DataKontrak_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
