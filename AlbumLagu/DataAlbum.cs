@@ -23,6 +23,35 @@ namespace AlbumLagu
             refreshform();
         }
 
+        private void btnsave_Click(object sender, EventArgs e)
+        {
+            idalbum = txtidalbum.Text;
+            namaalbum = txtnamaalbum.Text;
+            idartis = txtidartis.Text;
+            idlagu = txtidlagu.Text;
+            perusahaan = txtperusahaan.Text;
+            tahunrilis = txttahunrilis.Text;
+            genre = txtgenre.Text;
+            koneksi.Open();
+            string str = "insert into dbo.lagu (id_album, nama_album, id_artis, id_lagu, perusahaan, tahun_rilis, genre)" +
+                "values(@IDalbum, @nm, @IDartis, @IDlagu, @perusahaan, @thn, @gnr)";
+            SqlCommand cmd = new SqlCommand(str, koneksi);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add(new SqlParameter("@IDalbum", idalbum));
+            cmd.Parameters.Add(new SqlParameter("@nm", namaalbum));
+            cmd.Parameters.Add(new SqlParameter("@IDartis", idartis));
+            cmd.Parameters.Add(new SqlParameter("@IDlagu", idlagu));
+            cmd.Parameters.Add(new SqlParameter("@perusahaan", perusahaan));
+            cmd.Parameters.Add(new SqlParameter("@thn", tahunrilis));
+            cmd.Parameters.Add(new SqlParameter("@gnr", genre));
+            cmd.ExecuteNonQuery();
+            koneksi.Close();
+
+            MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            refreshform();
+        }
+
         public DataAlbum()
         {
             InitializeComponent();
