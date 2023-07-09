@@ -20,9 +20,17 @@ namespace AlbumLagu
         public DataLagu()
         {
             InitializeComponent();
+            koneksi = new SqlConnection(stringConnection);
+            this.bindingNavigator1.BindingSource = this.customerBindingSource;
+            refreshform();
         }
 
         private void DataLagu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void refreshform()
         {
 
         }
