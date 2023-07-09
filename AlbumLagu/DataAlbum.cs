@@ -28,7 +28,7 @@ namespace AlbumLagu
         private void DataAlbum_Load()
         {
             koneksi.Open();
-            SqlDataAdapter dataAdapter1 = new SqlDataAdapter(new SqlCommand("Select id_album, nama_album, id_artis, id_lagu, perusahaan, tahun_rilis from dbo.album", koneksi));
+            SqlDataAdapter dataAdapter1 = new SqlDataAdapter(new SqlCommand("Select id_album, nama_album, id_artis, id_lagu, perusahaan, tahun_rilis, genre from dbo.album", koneksi));
             DataSet ds = new DataSet();
             dataAdapter1.Fill(ds);
 
@@ -45,6 +45,8 @@ namespace AlbumLagu
                 new Binding("Text", this.customerBindingSource, "perusahaan", true));
             this.txttahunrilis.DataBindings.Add(
                 new Binding("Text", this.customerBindingSource, "tahun_rilis", true));
+            this.txtgenre.DataBindings.Add(
+                new Binding("Text", this.customerBindingSource, "genre", true));
             koneksi.Close();
 
         }
@@ -57,6 +59,7 @@ namespace AlbumLagu
             this.txtidlagu.DataBindings.Clear();
             this.txtperusahaan.DataBindings.Clear();
             this.txttahunrilis.DataBindings.Clear();
+            this.txtgenre.DataBindings.Clear();
 
         }
 
