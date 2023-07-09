@@ -49,6 +49,11 @@ namespace AlbumLagu
 
         }
 
+        private void btnclear_Click(object sender, EventArgs e)
+        {
+            refreshform();
+        }
+
         private void clearBinding()
         {
             this.txtidlagu.DataBindings.Clear();
