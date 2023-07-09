@@ -21,13 +21,27 @@ namespace AlbumLagu
         {
             InitializeComponent();
         }
-        
+        private void DataKontrak_Load()
+        {
+
+        }
 
         private void DataKontrak_Load(object sender, EventArgs e)
         {
 
         }
+        private void refreshform()
+        {
+            txtidartis.Enabled = false;
+            txtidkontrak.Enabled = false;
+            txtidproduser.Enabled = false;
+            txtnilaikontrak.Enabled = false;
+            btnsave.Enabled = false;
+            btnclear.Enabled = false;
+            clearBinding();
+            DataKontrak_Load();
 
+        }
         private void clearBinding()
         {
             this.txtidartis.DataBindings.Clear();
