@@ -69,9 +69,14 @@ namespace AlbumLagu
 
         private void dataKontrakToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DataKontrak dk = new DataKontrak(); 
-            dk.Show();
+            DataKontrak dtk = new DataKontrak(); 
+            dtk.Show();
             this.Hide();
+        }
+
+        private void toolStripDropDownButton2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
