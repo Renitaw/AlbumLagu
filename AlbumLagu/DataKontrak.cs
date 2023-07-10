@@ -21,11 +21,16 @@ namespace AlbumLagu
             koneksi = new SqlConnection(stringConnection);
             refreshform();
         }
-        private void DataKontrak_Load()
+        private void LoadData()
         {
-
+            koneksi.Open();
+            string query = "SELECT id_kontrak, id_artis, id_produser, tanggal_mulai, tanggal_berakhir, nilai_kontrak FROM kontrak";
+            SqlDataAdapter adapter = new SqlDataAdapter(query, koneksi);
+            DataSet dataSet = new DataSet();
+            adapter.Fill(dataSet);
+            dataGridView1.DataSource = dataSet.Tables[0];
+            koneksi.Close();
         }
-
         private void DataKontrak_Load(object sender, EventArgs e)
         {
 
@@ -39,7 +44,7 @@ namespace AlbumLagu
             btnsave.Enabled = false;
             btnclear.Enabled = false;
             clearBinding();
-            DataKontrak_Load();
+            LoadData();
 
         }
         private void clearBinding()
