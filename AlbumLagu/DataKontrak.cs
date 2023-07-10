@@ -77,5 +77,15 @@ namespace AlbumLagu
             btnsave.Enabled = true;
             btnclear.Enabled = true;
         }
+
+        private void btnsave_Click(object sender, EventArgs e)
+        {
+            string idKontrak = txtidkontrak.Text;
+            string idArtis = txtidartis.Text;
+            string idProduser = txtidproduser.Text;
+            DateTime tanggalMulai = dateTimePicker1.Value;
+            DateTime tanggalBerakhir = dateTimePicker2.Value;
+            int nilaiKontrak = 0;
+        }
     }
 }
