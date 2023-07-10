@@ -25,7 +25,17 @@ namespace AlbumLagu
 
         private void refreshform()
         {
-
+            txtidlirik.Enabled = false;
+            cbxjudul.Enabled = false;
+            cbxidpencipta.Enabled = false;
+            cbxnamapencipta.Enabled= false;
+            txtidlirik.Visible = false;
+            cbxjudul.SelectedIndex = -1;
+            cbxidpencipta.SelectedIndex = -1;
+            cbxnamapencipta.SelectedIndex = -1;
+            btnsave.Enabled = false;
+            btnclear.Enabled = false;
+            btnadd.Enabled = true;
         }
 
         private void datagridview1()
@@ -112,7 +122,7 @@ namespace AlbumLagu
                 int finalKodelirikInt = totallirik+ 1;
                 kodelirik = Convert.ToString(finalKodelirikInt);
             }
-            string queryStrings = "insert into dbo.status_mahasiswa (id_status,nim," + "status_mahasiswa, tahun_masuk)" + "values(@ids, @NIM, @sm, @tm)";
+            string queryStrings = "insert into dbo.status_mahasiswa (idlirik ,judul ," + "status_mahasiswa, tahun_masuk)" + "values(@ids, @NIM, @sm, @tm)";
             SqlCommand cmd = new SqlCommand(queryStrings, koneksi);
             cmd.CommandType = CommandType.Text;
 
@@ -134,6 +144,11 @@ namespace AlbumLagu
             Form1 frm = new Form1();
             frm.Show();
             this.Hide();
+        }
+
+        private void cbxjudul_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }

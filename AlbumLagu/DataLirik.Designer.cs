@@ -149,6 +149,7 @@
             this.cbxjudul.Name = "cbxjudul";
             this.cbxjudul.Size = new System.Drawing.Size(264, 28);
             this.cbxjudul.TabIndex = 15;
+            this.cbxjudul.SelectedIndexChanged += new System.EventHandler(this.cbxjudul_SelectedIndexChanged);
             // 
             // cbxidpencipta
             // 
