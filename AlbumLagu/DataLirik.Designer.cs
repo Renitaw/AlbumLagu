@@ -38,10 +38,11 @@
             this.btnclear = new System.Windows.Forms.Button();
             this.btnopen = new System.Windows.Forms.Button();
             this.btnback = new System.Windows.Forms.Button();
-            this.cbxidlirik = new System.Windows.Forms.ComboBox();
             this.cbxjudul = new System.Windows.Forms.ComboBox();
             this.cbxidpencipta = new System.Windows.Forms.ComboBox();
             this.cbxnamapencipta = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtidlirik = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -136,14 +137,6 @@
             this.btnback.Text = "Back";
             this.btnback.UseVisualStyleBackColor = true;
             // 
-            // cbxidlirik
-            // 
-            this.cbxidlirik.FormattingEnabled = true;
-            this.cbxidlirik.Location = new System.Drawing.Point(338, 234);
-            this.cbxidlirik.Name = "cbxidlirik";
-            this.cbxidlirik.Size = new System.Drawing.Size(264, 28);
-            this.cbxidlirik.TabIndex = 14;
-            // 
             // cbxjudul
             // 
             this.cbxjudul.FormattingEnabled = true;
@@ -168,15 +161,31 @@
             this.cbxnamapencipta.Size = new System.Drawing.Size(264, 28);
             this.cbxnamapencipta.TabIndex = 17;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(334, 234);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(0, 20);
+            this.label5.TabIndex = 18;
+            // 
+            // txtidlirik
+            // 
+            this.txtidlirik.Location = new System.Drawing.Point(340, 234);
+            this.txtidlirik.Name = "txtidlirik";
+            this.txtidlirik.Size = new System.Drawing.Size(262, 26);
+            this.txtidlirik.TabIndex = 19;
+            // 
             // DataLirik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtidlirik);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.cbxnamapencipta);
             this.Controls.Add(this.cbxidpencipta);
             this.Controls.Add(this.cbxjudul);
-            this.Controls.Add(this.cbxidlirik);
             this.Controls.Add(this.btnback);
             this.Controls.Add(this.btnopen);
             this.Controls.Add(this.btnclear);
@@ -208,9 +217,10 @@
         private System.Windows.Forms.Button btnclear;
         private System.Windows.Forms.Button btnopen;
         private System.Windows.Forms.Button btnback;
-        private System.Windows.Forms.ComboBox cbxidlirik;
         private System.Windows.Forms.ComboBox cbxjudul;
         private System.Windows.Forms.ComboBox cbxidpencipta;
         private System.Windows.Forms.ComboBox cbxnamapencipta;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtidlirik;
     }
 }
