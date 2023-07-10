@@ -73,5 +73,17 @@ namespace AlbumLagu
             datagridview1();
             btnopen.Enabled = false;
         }
+
+        private void btnadd_Click(object sender, EventArgs e)
+        {
+            txtidlirik.Enabled = true;
+            cbxjudul.Enabled = true;
+            cbxidpencipta.Enabled = true;
+            cbxnamapencipta.Enabled = true;
+            cblirik();
+            btnclear.Enabled = true;
+            btnsave.Enabled = true;
+            btnadd.Enabled = false;
+        }
     }
 }
