@@ -16,5 +16,10 @@ namespace AlbumLagu
         {
             InitializeComponent();
         }
+
+        private void DataArtis_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
