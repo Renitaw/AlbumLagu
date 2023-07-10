@@ -24,7 +24,13 @@ namespace AlbumLagu
         private void LoadData()
         {
             koneksi.Open();
-            string query = "SELECT id_kontrak, id_artis, id_produser, tanggal_mulai, tanggal_berakhir, nilai_kontrak FROM kontrak";
+            string query = "SELECT id_kontrak from dbo.lagu where" +
+                "select id_artis from dbo.lagu where" +
+                "select id_produser from dbo.lagu where" +
+                "select tanggal_mulai from dbo.lagu where" +
+                "select tanggal_berakhir from dbo.lagu where" +
+                "select nilai_kontrak from dbo.lagu where" +
+                "not EXISTS(select id_lirik from dbo.lirik)";
             SqlDataAdapter adapter = new SqlDataAdapter(query, koneksi);
             DataSet dataSet = new DataSet();
             adapter.Fill(dataSet);
