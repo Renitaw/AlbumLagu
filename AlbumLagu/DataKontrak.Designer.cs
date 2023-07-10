@@ -221,6 +221,7 @@
             this.btnback.TabIndex = 19;
             this.btnback.Text = "Back";
             this.btnback.UseVisualStyleBackColor = true;
+            this.btnback.Click += new System.EventHandler(this.btnback_Click);
             // 
             // DataKontrak
             // 
