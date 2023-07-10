@@ -19,6 +19,13 @@ namespace AlbumLagu
         public DataLirik()
         {
             InitializeComponent();
+            koneksi = new SqlConnection(stringConnection);
+            refreshform();
+        }
+
+        private void refreshform()
+        {
+
         }
 
         private void DataLirik_Load(object sender, EventArgs e)
