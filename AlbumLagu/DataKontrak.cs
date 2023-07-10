@@ -62,7 +62,8 @@ namespace AlbumLagu
 
         private void btnopen_Click(object sender, EventArgs e)
         {
-
+            LoadData();
+            btnopen.Enabled = false;
         }
     }
 }
