@@ -98,6 +98,25 @@ namespace AlbumLagu
             {
                 MessageBox.Show("Please enter all fields.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            else
+            {
+                koneksi.Open();
+                string query = "INSERT INTO kontrak (id_kontrak, id_artis, id_produser, tanggal_mulai, tanggal_berakhir, nilai_kontrak) " +
+                               "VALUES (@id_kontrak, @id_artis, @id_produser, @tanggal_mulai, @tanggal_berakhir, @nilai_kontrak)";
+                SqlCommand command = new SqlCommand(query, koneksi);
+                command.Parameters.AddWithValue("@id_kontrak", idKontrak);
+                command.Parameters.AddWithValue("@id_artis", idArtis);
+                command.Parameters.AddWithValue("@id_produser", idProduser);
+                command.Parameters.AddWithValue("@tanggal_mulai", tanggalMulai);
+                command.Parameters.AddWithValue("@tanggal_berakhir", tanggalBerakhir);
+                command.Parameters.AddWithValue("@nilai_kontrak", nilaiKontrak);
+                command.ExecuteNonQuery();
+
+                koneksi.Close();
+                MessageBox.Show("Data saved successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadData();
+                refreshform();
+            }
         }
     }
 }
