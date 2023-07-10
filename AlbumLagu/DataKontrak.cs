@@ -54,5 +54,10 @@ namespace AlbumLagu
             this.txtidproduser.DataBindings.Clear();
             this.txtnilaikontrak.DataBindings.Clear();
         }
+
+        private void btnclear_Click(object sender, EventArgs e)
+        {
+            refreshform();
+        }
     }
 }
