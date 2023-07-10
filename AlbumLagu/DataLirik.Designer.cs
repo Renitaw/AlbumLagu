@@ -185,6 +185,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "DataLirik";
             this.Text = "Data Lirik";
+            this.Load += new System.EventHandler(this.DataLirik_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
