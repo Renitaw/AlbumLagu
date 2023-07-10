@@ -26,6 +26,7 @@ namespace AlbumLagu
         private void refreshform()
         {
 
+
         }
 
         private void DataLirik_Load(object sender, EventArgs e)

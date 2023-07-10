@@ -33,10 +33,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtidlirik = new System.Windows.Forms.TextBox();
-            this.txtjudul = new System.Windows.Forms.TextBox();
-            this.txtidpencipta = new System.Windows.Forms.TextBox();
-            this.txtnamapencipta = new System.Windows.Forms.TextBox();
+            this.cbxlirik = new System.Windows.Forms.TextBox();
+            this.cbxjudul = new System.Windows.Forms.TextBox();
+            this.cbxidpencipta = new System.Windows.Forms.TextBox();
+            this.cbxnamapencipta = new System.Windows.Forms.TextBox();
             this.btnadd = new System.Windows.Forms.Button();
             this.btnsave = new System.Windows.Forms.Button();
             this.btnclear = new System.Windows.Forms.Button();
@@ -91,33 +91,33 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Nama Pencipta";
             // 
-            // txtidlirik
+            // cbxlirik
             // 
-            this.txtidlirik.Location = new System.Drawing.Point(325, 234);
-            this.txtidlirik.Name = "txtidlirik";
-            this.txtidlirik.Size = new System.Drawing.Size(277, 26);
-            this.txtidlirik.TabIndex = 5;
+            this.cbxlirik.Location = new System.Drawing.Point(325, 234);
+            this.cbxlirik.Name = "cbxlirik";
+            this.cbxlirik.Size = new System.Drawing.Size(277, 26);
+            this.cbxlirik.TabIndex = 5;
             // 
-            // txtjudul
+            // cbxjudul
             // 
-            this.txtjudul.Location = new System.Drawing.Point(325, 273);
-            this.txtjudul.Name = "txtjudul";
-            this.txtjudul.Size = new System.Drawing.Size(277, 26);
-            this.txtjudul.TabIndex = 6;
+            this.cbxjudul.Location = new System.Drawing.Point(325, 273);
+            this.cbxjudul.Name = "cbxjudul";
+            this.cbxjudul.Size = new System.Drawing.Size(277, 26);
+            this.cbxjudul.TabIndex = 6;
             // 
-            // txtidpencipta
+            // cbxidpencipta
             // 
-            this.txtidpencipta.Location = new System.Drawing.Point(325, 314);
-            this.txtidpencipta.Name = "txtidpencipta";
-            this.txtidpencipta.Size = new System.Drawing.Size(277, 26);
-            this.txtidpencipta.TabIndex = 7;
+            this.cbxidpencipta.Location = new System.Drawing.Point(325, 314);
+            this.cbxidpencipta.Name = "cbxidpencipta";
+            this.cbxidpencipta.Size = new System.Drawing.Size(277, 26);
+            this.cbxidpencipta.TabIndex = 7;
             // 
-            // txtnamapencipta
+            // cbxnamapencipta
             // 
-            this.txtnamapencipta.Location = new System.Drawing.Point(325, 353);
-            this.txtnamapencipta.Name = "txtnamapencipta";
-            this.txtnamapencipta.Size = new System.Drawing.Size(277, 26);
-            this.txtnamapencipta.TabIndex = 8;
+            this.cbxnamapencipta.Location = new System.Drawing.Point(325, 353);
+            this.cbxnamapencipta.Name = "cbxnamapencipta";
+            this.cbxnamapencipta.Size = new System.Drawing.Size(277, 26);
+            this.cbxnamapencipta.TabIndex = 8;
             // 
             // btnadd
             // 
@@ -174,10 +174,10 @@
             this.Controls.Add(this.btnclear);
             this.Controls.Add(this.btnsave);
             this.Controls.Add(this.btnadd);
-            this.Controls.Add(this.txtnamapencipta);
-            this.Controls.Add(this.txtidpencipta);
-            this.Controls.Add(this.txtjudul);
-            this.Controls.Add(this.txtidlirik);
+            this.Controls.Add(this.cbxnamapencipta);
+            this.Controls.Add(this.cbxidpencipta);
+            this.Controls.Add(this.cbxjudul);
+            this.Controls.Add(this.cbxlirik);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -199,10 +199,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtidlirik;
-        private System.Windows.Forms.TextBox txtjudul;
-        private System.Windows.Forms.TextBox txtidpencipta;
-        private System.Windows.Forms.TextBox txtnamapencipta;
+        private System.Windows.Forms.TextBox cbxlirik;
+        private System.Windows.Forms.TextBox cbxjudul;
+        private System.Windows.Forms.TextBox cbxidpencipta;
+        private System.Windows.Forms.TextBox cbxnamapencipta;
         private System.Windows.Forms.Button btnadd;
         private System.Windows.Forms.Button btnsave;
         private System.Windows.Forms.Button btnclear;
