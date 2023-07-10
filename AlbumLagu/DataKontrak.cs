@@ -65,5 +65,17 @@ namespace AlbumLagu
             LoadData();
             btnopen.Enabled = false;
         }
+
+        private void btnadd_Click(object sender, EventArgs e)
+        {
+            txtidkontrak.Enabled = true;
+            txtidartis.Enabled = true;
+            txtidproduser.Enabled = true;
+            dateTimePicker1.Enabled = true;
+            dateTimePicker2.Enabled = true;
+            txtnilaikontrak.Enabled = true;
+            btnsave.Enabled = true;
+            btnclear.Enabled = true;
+        }
     }
 }
