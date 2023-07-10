@@ -39,6 +39,12 @@ namespace AlbumLagu
             koneksi.Close();
         }
 
+        private void cblirik()
+        {
+
+
+        }
+
         private void DataLirik_Load(object sender, EventArgs e)
         {
 

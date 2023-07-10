@@ -33,15 +33,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.cbxlirik = new System.Windows.Forms.TextBox();
-            this.cbxjudul = new System.Windows.Forms.TextBox();
-            this.cbxidpencipta = new System.Windows.Forms.TextBox();
-            this.cbxnamapencipta = new System.Windows.Forms.TextBox();
             this.btnadd = new System.Windows.Forms.Button();
             this.btnsave = new System.Windows.Forms.Button();
             this.btnclear = new System.Windows.Forms.Button();
             this.btnopen = new System.Windows.Forms.Button();
             this.btnback = new System.Windows.Forms.Button();
+            this.cbxidlirik = new System.Windows.Forms.ComboBox();
+            this.cbxjudul = new System.Windows.Forms.ComboBox();
+            this.cbxidpencipta = new System.Windows.Forms.ComboBox();
+            this.cbxnamapencipta = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,39 +85,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(183, 353);
+            this.label4.Location = new System.Drawing.Point(183, 361);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(117, 20);
             this.label4.TabIndex = 4;
             this.label4.Text = "Nama Pencipta";
-            // 
-            // cbxlirik
-            // 
-            this.cbxlirik.Location = new System.Drawing.Point(325, 234);
-            this.cbxlirik.Name = "cbxlirik";
-            this.cbxlirik.Size = new System.Drawing.Size(277, 26);
-            this.cbxlirik.TabIndex = 5;
-            // 
-            // cbxjudul
-            // 
-            this.cbxjudul.Location = new System.Drawing.Point(325, 273);
-            this.cbxjudul.Name = "cbxjudul";
-            this.cbxjudul.Size = new System.Drawing.Size(277, 26);
-            this.cbxjudul.TabIndex = 6;
-            // 
-            // cbxidpencipta
-            // 
-            this.cbxidpencipta.Location = new System.Drawing.Point(325, 314);
-            this.cbxidpencipta.Name = "cbxidpencipta";
-            this.cbxidpencipta.Size = new System.Drawing.Size(277, 26);
-            this.cbxidpencipta.TabIndex = 7;
-            // 
-            // cbxnamapencipta
-            // 
-            this.cbxnamapencipta.Location = new System.Drawing.Point(325, 353);
-            this.cbxnamapencipta.Name = "cbxnamapencipta";
-            this.cbxnamapencipta.Size = new System.Drawing.Size(277, 26);
-            this.cbxnamapencipta.TabIndex = 8;
             // 
             // btnadd
             // 
@@ -164,20 +136,52 @@
             this.btnback.Text = "Back";
             this.btnback.UseVisualStyleBackColor = true;
             // 
+            // cbxidlirik
+            // 
+            this.cbxidlirik.FormattingEnabled = true;
+            this.cbxidlirik.Location = new System.Drawing.Point(338, 234);
+            this.cbxidlirik.Name = "cbxidlirik";
+            this.cbxidlirik.Size = new System.Drawing.Size(264, 28);
+            this.cbxidlirik.TabIndex = 14;
+            // 
+            // cbxjudul
+            // 
+            this.cbxjudul.FormattingEnabled = true;
+            this.cbxjudul.Location = new System.Drawing.Point(338, 276);
+            this.cbxjudul.Name = "cbxjudul";
+            this.cbxjudul.Size = new System.Drawing.Size(264, 28);
+            this.cbxjudul.TabIndex = 15;
+            // 
+            // cbxidpencipta
+            // 
+            this.cbxidpencipta.FormattingEnabled = true;
+            this.cbxidpencipta.Location = new System.Drawing.Point(338, 318);
+            this.cbxidpencipta.Name = "cbxidpencipta";
+            this.cbxidpencipta.Size = new System.Drawing.Size(264, 28);
+            this.cbxidpencipta.TabIndex = 16;
+            // 
+            // cbxnamapencipta
+            // 
+            this.cbxnamapencipta.FormattingEnabled = true;
+            this.cbxnamapencipta.Location = new System.Drawing.Point(338, 353);
+            this.cbxnamapencipta.Name = "cbxnamapencipta";
+            this.cbxnamapencipta.Size = new System.Drawing.Size(264, 28);
+            this.cbxnamapencipta.TabIndex = 17;
+            // 
             // DataLirik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cbxnamapencipta);
+            this.Controls.Add(this.cbxidpencipta);
+            this.Controls.Add(this.cbxjudul);
+            this.Controls.Add(this.cbxidlirik);
             this.Controls.Add(this.btnback);
             this.Controls.Add(this.btnopen);
             this.Controls.Add(this.btnclear);
             this.Controls.Add(this.btnsave);
             this.Controls.Add(this.btnadd);
-            this.Controls.Add(this.cbxnamapencipta);
-            this.Controls.Add(this.cbxidpencipta);
-            this.Controls.Add(this.cbxjudul);
-            this.Controls.Add(this.cbxlirik);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -199,14 +203,14 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox cbxlirik;
-        private System.Windows.Forms.TextBox cbxjudul;
-        private System.Windows.Forms.TextBox cbxidpencipta;
-        private System.Windows.Forms.TextBox cbxnamapencipta;
         private System.Windows.Forms.Button btnadd;
         private System.Windows.Forms.Button btnsave;
         private System.Windows.Forms.Button btnclear;
         private System.Windows.Forms.Button btnopen;
         private System.Windows.Forms.Button btnback;
+        private System.Windows.Forms.ComboBox cbxidlirik;
+        private System.Windows.Forms.ComboBox cbxjudul;
+        private System.Windows.Forms.ComboBox cbxidpencipta;
+        private System.Windows.Forms.ComboBox cbxnamapencipta;
     }
 }
