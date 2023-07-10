@@ -53,7 +53,7 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(145, 16);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
@@ -123,7 +123,7 @@
             // txtidkontrak
             // 
             this.txtidkontrak.Location = new System.Drawing.Point(232, 155);
-            this.txtidkontrak.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtidkontrak.Margin = new System.Windows.Forms.Padding(2);
             this.txtidkontrak.Name = "txtidkontrak";
             this.txtidkontrak.Size = new System.Drawing.Size(183, 20);
             this.txtidkontrak.TabIndex = 7;
@@ -131,7 +131,7 @@
             // txtidartis
             // 
             this.txtidartis.Location = new System.Drawing.Point(232, 176);
-            this.txtidartis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtidartis.Margin = new System.Windows.Forms.Padding(2);
             this.txtidartis.Name = "txtidartis";
             this.txtidartis.Size = new System.Drawing.Size(183, 20);
             this.txtidartis.TabIndex = 8;
@@ -139,7 +139,7 @@
             // txtidproduser
             // 
             this.txtidproduser.Location = new System.Drawing.Point(232, 196);
-            this.txtidproduser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtidproduser.Margin = new System.Windows.Forms.Padding(2);
             this.txtidproduser.Name = "txtidproduser";
             this.txtidproduser.Size = new System.Drawing.Size(183, 20);
             this.txtidproduser.TabIndex = 9;
@@ -147,7 +147,7 @@
             // txtnilaikontrak
             // 
             this.txtnilaikontrak.Location = new System.Drawing.Point(232, 257);
-            this.txtnilaikontrak.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtnilaikontrak.Margin = new System.Windows.Forms.Padding(2);
             this.txtnilaikontrak.Name = "txtnilaikontrak";
             this.txtnilaikontrak.Size = new System.Drawing.Size(183, 20);
             this.txtnilaikontrak.TabIndex = 12;
@@ -155,7 +155,7 @@
             // btnadd
             // 
             this.btnadd.Location = new System.Drawing.Point(145, 295);
-            this.btnadd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnadd.Margin = new System.Windows.Forms.Padding(2);
             this.btnadd.Name = "btnadd";
             this.btnadd.Size = new System.Drawing.Size(50, 19);
             this.btnadd.TabIndex = 13;
@@ -165,7 +165,7 @@
             // btnsave
             // 
             this.btnsave.Location = new System.Drawing.Point(253, 295);
-            this.btnsave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnsave.Margin = new System.Windows.Forms.Padding(2);
             this.btnsave.Name = "btnsave";
             this.btnsave.Size = new System.Drawing.Size(50, 19);
             this.btnsave.TabIndex = 14;
@@ -175,17 +175,18 @@
             // btnclear
             // 
             this.btnclear.Location = new System.Drawing.Point(364, 295);
-            this.btnclear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnclear.Margin = new System.Windows.Forms.Padding(2);
             this.btnclear.Name = "btnclear";
             this.btnclear.Size = new System.Drawing.Size(50, 19);
             this.btnclear.TabIndex = 15;
             this.btnclear.Text = "Clear";
             this.btnclear.UseVisualStyleBackColor = true;
+            this.btnclear.Click += new System.EventHandler(this.btnclear_Click);
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(232, 216);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(183, 20);
             this.dateTimePicker1.TabIndex = 16;
@@ -193,7 +194,7 @@
             // dateTimePicker2
             // 
             this.dateTimePicker2.Location = new System.Drawing.Point(232, 237);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(183, 20);
             this.dateTimePicker2.TabIndex = 17;
@@ -201,7 +202,7 @@
             // btnopen
             // 
             this.btnopen.Location = new System.Drawing.Point(431, 16);
-            this.btnopen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnopen.Margin = new System.Windows.Forms.Padding(2);
             this.btnopen.Name = "btnopen";
             this.btnopen.Size = new System.Drawing.Size(50, 23);
             this.btnopen.TabIndex = 18;
@@ -211,7 +212,7 @@
             // btnback
             // 
             this.btnback.Location = new System.Drawing.Point(81, 16);
-            this.btnback.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnback.Margin = new System.Windows.Forms.Padding(2);
             this.btnback.Name = "btnback";
             this.btnback.Size = new System.Drawing.Size(50, 23);
             this.btnback.TabIndex = 19;
@@ -241,7 +242,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DataKontrak";
             this.Text = "Data Kontrak";
             this.Load += new System.EventHandler(this.DataKontrak_Load);
