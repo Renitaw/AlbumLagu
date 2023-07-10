@@ -67,5 +67,11 @@ namespace AlbumLagu
         {
             refreshform();
         }
+
+        private void btnopen_Click(object sender, EventArgs e)
+        {
+            datagridview1();
+            btnopen.Enabled = false;
+        }
     }
 }
