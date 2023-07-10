@@ -92,7 +92,12 @@ namespace AlbumLagu
                 return;
 
             }
-
+            if (string.IsNullOrWhiteSpace(idKontrak) ||
+                string.IsNullOrWhiteSpace(idArtis) ||
+                string.IsNullOrWhiteSpace(idProduser))
+            {
+                MessageBox.Show("Please enter all fields.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }
