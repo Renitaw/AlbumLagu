@@ -86,6 +86,13 @@ namespace AlbumLagu
             DateTime tanggalMulai = dateTimePicker1.Value;
             DateTime tanggalBerakhir = dateTimePicker2.Value;
             int nilaiKontrak = 0;
+            if (!int.TryParse(txtnilaikontrak.Text, out nilaiKontrak))
+            {
+                MessageBox.Show("Please enter a valid integer value for 'Nilai Kontrak'.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+
+            }
+
         }
     }
 }
