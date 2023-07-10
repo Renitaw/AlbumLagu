@@ -15,8 +15,7 @@ namespace AlbumLagu
     {
         private string stringConnection = "data source=RENITAWIDIASTUT\\RENITAWDST;database=ALBUMLAGUUAS;User ID=sa; Password=Rere2607";
         private SqlConnection koneksi;
-        private string idlirik, judul, idpencipta, namapencipta;
-        BindingSource customerBindingSource = new BindingSource();
+
         public DataLirik()
         {
             InitializeComponent();
