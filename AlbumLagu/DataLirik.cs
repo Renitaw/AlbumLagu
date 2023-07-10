@@ -26,7 +26,17 @@ namespace AlbumLagu
         private void refreshform()
         {
 
+        }
 
+        private void datagridview1()
+        {
+            koneksi.Open();
+            string str = "select * from dbo.lirik";
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            koneksi.Close();
         }
 
         private void DataLirik_Load(object sender, EventArgs e)
