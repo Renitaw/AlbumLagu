@@ -85,5 +85,48 @@ namespace AlbumLagu
             btnsave.Enabled = true;
             btnadd.Enabled = false;
         }
+
+        private void btnsave_Click(object sender, EventArgs e)
+        {
+            string idlirik = txtidlirik.Text;
+            string judul = cbxjudul.Text;
+            string idpencipta = cbxidpencipta.Text;
+            string namapencipta = cbxnamapencipta.Text;
+            int count = 0;
+            string tempKodelirik = "";
+            string kodelirik = "";
+            koneksi.Open();
+
+            string str = "select count (*) from dbo.lirik";
+            SqlCommand cm = new SqlCommand(str, koneksi);
+            count = (int)cm.ExecuteScalar();
+            if (count == 0)
+            {
+                kodelirik = "1";
+            }
+            else
+            {
+                string queryString = "select Max(id_lirik) from dbo.lirik";
+                SqlCommand cmlirik = new SqlCommand(str, koneksi);
+                int totallirik = (int)cmlirik.ExecuteScalar();
+                int finalKodelirikInt = totallirik+ 1;
+                kodelirik = Convert.ToString(finalKodelirikInt);
+            }
+            string queryStrings = "insert into dbo.status_mahasiswa (id_status,nim," + "status_mahasiswa, tahun_masuk)" + "values(@ids, @NIM, @sm, @tm)";
+            SqlCommand cmd = new SqlCommand(queryStrings, koneksi);
+            cmd.CommandType = CommandType.Text;
+
+            cmd.Parameters.Add(new SqlParameter("idlirik", kodelirik));
+            cmd.Parameters.Add(new SqlParameter("judl",judul ));
+            cmd.Parameters.Add(new SqlParameter("idpencipta", idpencipta));
+            cmd.Parameters.Add(new SqlParameter("namapencipta", namapencipta));
+            cmd.ExecuteNonQuery();
+            koneksi.Close();
+
+            MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            refreshform();
+            datagridview1();
+
+        }
     }
 }
