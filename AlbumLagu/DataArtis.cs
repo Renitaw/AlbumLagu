@@ -45,7 +45,14 @@ namespace AlbumLagu
             koneksi.Close();
 
         }
-
+        private void clearBinding()
+        {
+            this.txtidartis.DataBindings.Clear();
+            this.txtnamaartis.DataBindings.Clear();
+            this.dttl.DataBindings.Clear();
+            this.txtgenre.DataBindings.Clear();
+            this.txtnotelepon.DataBindings.Clear();
+        }
 
         private void refreshform()
         {
