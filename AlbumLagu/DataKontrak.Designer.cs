@@ -46,6 +46,8 @@
             this.btnback = new System.Windows.Forms.Button();
             this.cbxidartis = new System.Windows.Forms.ComboBox();
             this.cbxidproduser = new System.Windows.Forms.ComboBox();
+            this.btnupdate = new System.Windows.Forms.Button();
+            this.btndelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -208,11 +210,33 @@
             this.cbxidproduser.TabIndex = 21;
             this.cbxidproduser.SelectedIndexChanged += new System.EventHandler(this.cbxproduser_SelectedIndexChanged);
             // 
+            // btnupdate
+            // 
+            this.btnupdate.Location = new System.Drawing.Point(646, 89);
+            this.btnupdate.Name = "btnupdate";
+            this.btnupdate.Size = new System.Drawing.Size(75, 33);
+            this.btnupdate.TabIndex = 22;
+            this.btnupdate.Text = "Update";
+            this.btnupdate.UseVisualStyleBackColor = true;
+            this.btnupdate.Click += new System.EventHandler(this.btnupdate_Click);
+            // 
+            // btndelete
+            // 
+            this.btndelete.Location = new System.Drawing.Point(646, 155);
+            this.btndelete.Name = "btndelete";
+            this.btndelete.Size = new System.Drawing.Size(75, 31);
+            this.btndelete.TabIndex = 23;
+            this.btndelete.Text = "Delete";
+            this.btndelete.UseVisualStyleBackColor = true;
+            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
+            // 
             // DataKontrak
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(864, 529);
+            this.Controls.Add(this.btndelete);
+            this.Controls.Add(this.btnupdate);
             this.Controls.Add(this.cbxidproduser);
             this.Controls.Add(this.cbxidartis);
             this.Controls.Add(this.btnback);
@@ -260,5 +284,7 @@
         private System.Windows.Forms.Button btnback;
         private System.Windows.Forms.ComboBox cbxidartis;
         private System.Windows.Forms.ComboBox cbxidproduser;
+        private System.Windows.Forms.Button btnupdate;
+        private System.Windows.Forms.Button btndelete;
     }
 }

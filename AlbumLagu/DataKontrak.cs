@@ -145,5 +145,122 @@ namespace AlbumLagu
         {
 
         }
+
+        private void btnupdate_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Pilih baris data yang akan diperbarui", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string idkontrak = txtidkontrak.Text;
+            string idartis = cbxidartis.SelectedValue.ToString();
+            string idproduser = cbxidproduser.SelectedValue.ToString();
+            DateTime tanggalmulai = dtm.Value;
+            DateTime tanggalberakhir = dttb.Value;
+            string nilaikontrak = txtnilaikontrak.Text;
+
+            if (string.IsNullOrEmpty(idkontrak))
+            {
+                MessageBox.Show("ID Kontrak tidak valid", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (string.IsNullOrEmpty(idartis))
+            {
+                MessageBox.Show("Pilih ID Artis", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (string.IsNullOrEmpty(idproduser))
+            {
+                MessageBox.Show("Pilih ID Produser", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (string.IsNullOrEmpty(nilaikontrak))
+            {
+                MessageBox.Show("Masukkan Nilai Kontrak", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string sql = "UPDATE kontrak SET id_artis = @id_artis, id_produser = @id_produser, tanggal_mulai = @tanggal_mulai, tanggal_berakhir = @tanggal_berakhir, nilai_kontrak = @nilai_kontrak WHERE id_kontrak = @id_kontrak";
+            using (SqlCommand command = new SqlCommand(sql, koneksi))
+            {
+                command.Parameters.AddWithValue("@id_kontrak", idkontrak);
+                command.Parameters.AddWithValue("@id_artis", idartis);
+                command.Parameters.AddWithValue("@id_produser", idproduser);
+                command.Parameters.AddWithValue("@tanggal_mulai", tanggalmulai);
+                command.Parameters.AddWithValue("@tanggal_berakhir", tanggalberakhir);
+                command.Parameters.AddWithValue("@nilai_kontrak", nilaikontrak);
+
+                try
+                {
+                    koneksi.Open();
+                    int rowsAffected = command.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Data berhasil diperbarui", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        koneksi.Close();
+                        refreshform();
+                        datagridview1();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Data tidak ditemukan.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Terjadi kesalahan: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void btndelete_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Pilih baris data yang akan dihapus", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            DialogResult result = MessageBox.Show("Apakah Anda yakin ingin menghapus data ini?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                string idkontrak = txtidkontrak.Text;
+
+                if (string.IsNullOrEmpty(idkontrak))
+                {
+                    MessageBox.Show("ID Kontrak tidak valid", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                string sql = "DELETE FROM kontrak WHERE id_kontrak = @id_kontrak";
+                using (SqlCommand command = new SqlCommand(sql, koneksi))
+                {
+                    command.Parameters.AddWithValue("@id_kontrak", idkontrak);
+
+                    try
+                    {
+                        koneksi.Open();
+                        int rowsAffected = command.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Data berhasil dihapus", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            koneksi.Close();
+                            refreshform();
+                            datagridview1();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Data tidak ditemukan.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Terjadi kesalahan: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
     }
 }
