@@ -47,6 +47,29 @@ namespace AlbumLagu
 
         }
 
+        private void btnsave_Click(object sender, EventArgs e)
+        {
+            idproduser = txtidproduser.Text;
+            namaproduser = txtnamaproduser.Text;
+            perusahaan = txtperusahaan.Text;
+            alamat = txtalamat.Text;
+            notelepon = txtnotelepon.Text;
+            koneksi.Open();
+            string str = "insert into dbo.produser (id_produser, nama_produser, perusahaan, alamat, no_telepon)" +
+                "values(@IDproduser, @namaproduser, @perusahaan, @alamat, @notelepon)";
+            SqlCommand cmd = new SqlCommand(str, koneksi);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add(new SqlParameter("@IDproduser", idproduser));
+            cmd.Parameters.Add(new SqlParameter("@namaproduser", namaproduser));
+            cmd.Parameters.Add(new SqlParameter("@perusahaan", perusahaan));
+            cmd.Parameters.Add(new SqlParameter("@alamat", alamat));
+            cmd.Parameters.Add(new SqlParameter("@notelepon", notelepon));
+            cmd.ExecuteNonQuery();
+            koneksi.Close();
+            MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            refreshform();
+        }
+
         private void clearBinding()
         {
             this.txtidproduser.DataBindings.Clear();
