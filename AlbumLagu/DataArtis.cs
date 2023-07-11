@@ -20,6 +20,14 @@ namespace AlbumLagu
         public DataArtis()
         {
             InitializeComponent();
+            koneksi = new SqlConnection(stringConnection);
+            this.bindingNavigator1.BindingSource = this.customerBindingSource;
+            refreshform();
+        }
+
+        private void refreshform()
+        {
+
         }
 
         private void DataArtis_Load(object sender, EventArgs e)
