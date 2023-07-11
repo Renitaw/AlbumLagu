@@ -18,6 +18,14 @@ namespace AlbumLagu
         public DataDaftarPutar()
         {
             InitializeComponent();
+            koneksi = new SqlConnection(stringConnection);
+            refreshform();
+        }
+
+        private void refreshform()
+        {
+
+
         }
 
         private void DataDaftarPutar_Load(object sender, EventArgs e)
