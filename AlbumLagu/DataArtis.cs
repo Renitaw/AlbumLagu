@@ -42,6 +42,29 @@ namespace AlbumLagu
             btnadd.Enabled = false;
         }
 
+        private void btnsave_Click(object sender, EventArgs e)
+        {
+            idartis = txtidartis.Text;
+            namaartis = txtnamaartis.Text;
+            tanggallahir = dttl.Text;
+            genre = txtgenre.Text;
+            notelepon = txtnotelepon.Text;
+            koneksi.Open();
+            string str = "insert into dbo.artis (id_artis, nama_artis, tanggal_lahir, genre, no_telepon)" +
+                "values(@IDartis, @Namaartis, @tanggallahir, @genre, @notelepon)";
+            SqlCommand cmd = new SqlCommand(str, koneksi);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add(new SqlParameter("@IDartis", idartis));
+            cmd.Parameters.Add(new SqlParameter("@Namaartis", namaartis));
+            cmd.Parameters.Add(new SqlParameter("@tanggallahir", tanggallahir));
+            cmd.Parameters.Add(new SqlParameter("@genre", genre));
+            cmd.Parameters.Add(new SqlParameter("@notelepon", notelepon));
+            cmd.ExecuteNonQuery();
+            koneksi.Close();
+            MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            refreshform();
+        }
+
         private void DataArtis_Load()
         {
             koneksi.Open();
