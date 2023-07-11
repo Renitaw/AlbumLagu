@@ -58,7 +58,15 @@ namespace AlbumLagu
 
         private void refreshform()
         {
-
+            txtidproduser.Enabled = false;
+            txtnamaproduser.Enabled = false;
+            txtperusahaan.Enabled = false;
+            txtalamat.Enabled = false;
+            txtnotelepon.Enabled = false;
+            btnsave.Enabled = false;
+            btnclear.Enabled = false;
+            clearBinding();
+            DataProduser_Load();
 
         }
 
