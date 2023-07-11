@@ -33,8 +33,8 @@ namespace AlbumLagu
             tahunrilis = txttahunrilis.Text;
             genre = txtgenre.Text;
             koneksi.Open();
-            string str = "INSERT INTO dbo.lagu (id_album, nama_album, id_artis, id_lagu, perusahaan, tahun_rilis, genre)" +
-              "VALUES (@IDalbum, @namaalbum, @IDartis, @IDlagu, @perusahaan, @tahunrilis, @genre)";
+            string str = "insert into dbo.album (id_album, nama_album, id_artis, id_lagu, perusahaan, tahun_rilis, genre)" +
+                "values(@IDalbum, @namaalbum, @IDartis, @IDlagu, @perusahaan, @tahunrilis, @genre)";
             SqlCommand cmd = new SqlCommand(str, koneksi);
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.Add(new SqlParameter("@IDalbum", idalbum));
@@ -42,13 +42,11 @@ namespace AlbumLagu
             cmd.Parameters.Add(new SqlParameter("@IDartis", idartis));
             cmd.Parameters.Add(new SqlParameter("@IDlagu", idlagu));
             cmd.Parameters.Add(new SqlParameter("@perusahaan", perusahaan));
-            cmd.Parameters.Add(new SqlParameter("@tahunrilis", tahunrilis));
-            cmd.Parameters.Add(new SqlParameter("@genre", genre));
+            cmd.Parameters.Add(new SqlParameter("tahunrilis", tahunrilis));
+            cmd.Parameters.Add(new SqlParameter("genre", genre));
             cmd.ExecuteNonQuery();
             koneksi.Close();
-
             MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
             refreshform();
         }
 

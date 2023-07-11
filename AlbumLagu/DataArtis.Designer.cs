@@ -349,6 +349,7 @@
             this.Controls.Add(this.bindingNavigator1);
             this.Name = "DataArtis";
             this.Text = "Artis";
+            this.Load += new System.EventHandler(this.DataArtis_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
