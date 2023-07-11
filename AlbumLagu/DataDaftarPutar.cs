@@ -150,5 +150,108 @@ namespace AlbumLagu
             f1.Show();
             this.Hide();
         }
+
+        private void btnupdt_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Pilih baris data yang akan diperbarui", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string iddaftarputar = txtiddaftarputar.Text;
+            string namadaftar = txtnamadaftar.Text;
+            string idpengguna = txtidpengguna.Text;
+            string idlagu = cbxidlagu.SelectedValue.ToString();
+
+            if (string.IsNullOrEmpty(iddaftarputar))
+            {
+                MessageBox.Show("ID Daftar Putar tidak valid", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (string.IsNullOrEmpty(namadaftar))
+            {
+                MessageBox.Show("Masukkan Nama Daftar", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (string.IsNullOrEmpty(idpengguna))
+            {
+                MessageBox.Show("Masukkan ID Pengguna", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (string.IsNullOrEmpty(idlagu))
+            {
+                MessageBox.Show("Pilih ID Lagu", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string sql = "UPDATE daftar_putar SET nama_daftar = @nama_daftar, id_pengguna = @id_pengguna, id_lagu = @id_lagu WHERE id_daftar_putar = @id_daftar_putar";
+            using (SqlCommand command = new SqlCommand(sql, koneksi))
+            {
+                command.Parameters.AddWithValue("@id_daftar_putar", iddaftarputar);
+                command.Parameters.AddWithValue("@nama_daftar", namadaftar);
+                command.Parameters.AddWithValue("@id_pengguna", idpengguna);
+                command.Parameters.AddWithValue("@id_lagu", idlagu);
+
+                try
+                {
+                    koneksi.Open();
+                    int rowsAffected = command.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Data berhasil diperbarui", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        koneksi.Close();
+                        refreshform();
+                        dataGridView();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Data tidak ditemukan.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Terjadi kesalahan: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void btndlt_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Pilih baris data yang akan dihapus", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string iddaftarputar = dataGridView1.SelectedRows[0].Cells["id_daftar_putar"].Value.ToString();
+
+            string sql = "DELETE FROM daftar_putar WHERE id_daftar_putar = @id_daftar_putar";
+            using (SqlCommand command = new SqlCommand(sql, koneksi))
+            {
+                command.Parameters.AddWithValue("@id_daftar_putar", iddaftarputar);
+
+                try
+                {
+                    koneksi.Open();
+                    int rowsAffected = command.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Data berhasil dihapus", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        koneksi.Close();
+                        refreshform();
+                        dataGridView();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Data tidak ditemukan.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Terjadi kesalahan: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
     }
 }

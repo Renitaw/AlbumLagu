@@ -42,6 +42,8 @@
             this.btnopen = new System.Windows.Forms.Button();
             this.btnback = new System.Windows.Forms.Button();
             this.cbxidlagu = new System.Windows.Forms.ComboBox();
+            this.btnupdt = new System.Windows.Forms.Button();
+            this.btndlt = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -170,11 +172,33 @@
             this.cbxidlagu.Size = new System.Drawing.Size(265, 28);
             this.cbxidlagu.TabIndex = 14;
             // 
+            // btnupdt
+            // 
+            this.btnupdt.Location = new System.Drawing.Point(604, 78);
+            this.btnupdt.Name = "btnupdt";
+            this.btnupdt.Size = new System.Drawing.Size(75, 33);
+            this.btnupdt.TabIndex = 15;
+            this.btnupdt.Text = "Update";
+            this.btnupdt.UseVisualStyleBackColor = true;
+            this.btnupdt.Click += new System.EventHandler(this.btnupdt_Click);
+            // 
+            // btndlt
+            // 
+            this.btndlt.Location = new System.Drawing.Point(604, 127);
+            this.btndlt.Name = "btndlt";
+            this.btndlt.Size = new System.Drawing.Size(75, 31);
+            this.btndlt.TabIndex = 16;
+            this.btndlt.Text = "Delete";
+            this.btndlt.UseVisualStyleBackColor = true;
+            this.btndlt.Click += new System.EventHandler(this.btndlt_Click);
+            // 
             // DataDaftarPutar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btndlt);
+            this.Controls.Add(this.btnupdt);
             this.Controls.Add(this.cbxidlagu);
             this.Controls.Add(this.btnback);
             this.Controls.Add(this.btnopen);
@@ -214,5 +238,7 @@
         private System.Windows.Forms.Button btnopen;
         private System.Windows.Forms.Button btnback;
         private System.Windows.Forms.ComboBox cbxidlagu;
+        private System.Windows.Forms.Button btnupdt;
+        private System.Windows.Forms.Button btndlt;
     }
 }
