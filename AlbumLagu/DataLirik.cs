@@ -49,24 +49,6 @@ namespace AlbumLagu
             koneksi.Close();
         }
 
-        private void cblirik()
-        {
-            koneksi.Open();
-            string str = "select judul, id_pencipta from dbo.lagu where" +
-                "select nama_pencipta from dbo.pencipta where" +
-                "not EXISTS(select id_lirik from dbo.lirik)";
-            SqlCommand cmd = new SqlCommand(str, koneksi);
-            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
-            DataSet ds = new DataSet();
-            da.Fill(ds);
-            cmd.ExecuteReader();
-            koneksi.Close();
-
-            cbxjudul.DisplayMember = "judul";
-            cbxjudul.ValueMember = "judul";
-            cbxjudul.DataSource = ds.Tables[0];
-
-        }
 
         private void DataLirik_Load(object sender, EventArgs e)
         {
@@ -90,7 +72,6 @@ namespace AlbumLagu
             cbxjudul.Enabled = true;
             cbxidpencipta.Enabled = true;
             cbxnamapencipta.Enabled = true;
-            cblirik();
             btnclear.Enabled = true;
             btnsave.Enabled = true;
             btnadd.Enabled = false;
