@@ -120,6 +120,7 @@
             this.btnadd.TabIndex = 9;
             this.btnadd.Text = "Add";
             this.btnadd.UseVisualStyleBackColor = true;
+            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
             // btnsave
             // 

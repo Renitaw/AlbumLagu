@@ -60,5 +60,16 @@ namespace AlbumLagu
             datagridview1();
             btnopen.Enabled = false;
         }
+
+        private void btnadd_Click(object sender, EventArgs e)
+        {
+            txtiddaftarputar.Enabled = true;
+            txtnamadaftar.Enabled = true;
+            txtidpengguna.Enabled = true;
+            cbxidlagu.Enabled = true;
+            btnclear.Enabled = true;
+            btnsave.Enabled = true;
+            btnadd.Enabled = false;
+        }
     }
 }
