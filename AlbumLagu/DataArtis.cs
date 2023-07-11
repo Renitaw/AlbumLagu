@@ -56,7 +56,15 @@ namespace AlbumLagu
 
         private void refreshform()
         {
-
+            txtidartis.Enabled = false;
+            txtnamaartis.Enabled = false;
+            dttl.Enabled = false;
+            txtgenre.Enabled = false;
+            txtnotelepon.Enabled = false;
+            btnsave.Enabled = false;
+            btnclear.Enabled = false;
+            clearBinding();
+            DataArtis_Load();
         }
 
         private void DataArtis_Load(object sender, EventArgs e)
