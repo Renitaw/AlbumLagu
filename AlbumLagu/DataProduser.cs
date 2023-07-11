@@ -87,6 +87,11 @@ namespace AlbumLagu
             btnadd.Enabled = false;
         }
 
+        private void btnclear_Click(object sender, EventArgs e)
+        {
+            refreshform();
+        }
+
         private void clearBinding()
         {
             this.txtidproduser.DataBindings.Clear();
