@@ -34,6 +34,17 @@ namespace AlbumLagu
 
         }
 
+        private void datagridview1()
+        {
+            koneksi.Open();
+            string str = "select * from dbo.daftar_putar";
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            koneksi.Close();
+        }
+
         private void DataDaftarPutar_Load(object sender, EventArgs e)
         {
 
