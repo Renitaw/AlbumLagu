@@ -21,17 +21,11 @@ namespace AlbumLagu
             koneksi = new SqlConnection(stringConnection);
             refreshform();
         }
-        private void LoadData()
+        private void datagridview1()
         {
             koneksi.Open();
-            string query = "SELECT id_kontrak from dbo.kontrak where" +
-                "select id_artis from dbo.artis where" +
-                "select id_produser from dbo.produser where" +
-                "select tanggal_mulai from dbo.kontrak where" +
-                "select tanggal_berakhir from dbo.kontrak where" +
-                "select nilai_kontrak from dbo.kontrak where" +
-                "not EXISTS(select id_lirik from dbo.lirik)";
-            SqlDataAdapter da = new SqlDataAdapter(query, koneksi);
+            string str = "select * from dbo.kontrak";
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
             DataSet ds = new DataSet();
             da.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0];
@@ -67,7 +61,7 @@ namespace AlbumLagu
 
         private void btnopen_Click(object sender, EventArgs e)
         {
-            LoadData();
+            datagridview1();
             btnopen.Enabled = false;
         }
 
@@ -86,49 +80,55 @@ namespace AlbumLagu
         private void btnsave_Click(object sender, EventArgs e)
         {
             string idkontrak = txtidkontrak.Text;
-            string idartis = cbxidartis.Text;
-            string idproduser = cbxidproduser.Text;
-            DateTime tanggalMulai = dtm.Value;
-            DateTime tanggalBerakhir = dttb.Value;
-            int nilaiKontrak = 0;
-            if (!int.TryParse(txtnilaikontrak.Text, out nilaiKontrak))
-            {
-                MessageBox.Show("Please enter a valid integer value for 'Nilai Kontrak'.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+            string idartis = cbxidartis.ValueMember;
+            string idproduser = cbxidproduser.ValueMember;
+            DateTime tanggalmulai = dtm.Value;
+            DateTime tanggalberakhir = dttb.Value;
+            string nilaikontrak = txtnilaikontrak.Text;
 
-            }
-            if (string.IsNullOrWhiteSpace(idkontrak) ||
-                string.IsNullOrWhiteSpace(idartis) ||
-                string.IsNullOrWhiteSpace(idproduser))
+            if (idkontrak == "")
             {
-                MessageBox.Show("Please enter all fields.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Masukkan id_kontrak", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (idartis == "")
+            {
+                MessageBox.Show("Masukkan id_artis", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (idproduser == "")
+            {
+                MessageBox.Show("Masukkan id_produser", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (string.IsNullOrEmpty(tanggalmulai.ToString()))
+            {
+                MessageBox.Show("Masukkan tanggal_mulai", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (string.IsNullOrEmpty(tanggalberakhir.ToString()))
+            {
+                MessageBox.Show("Masukkan tanggal_berakhir", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
                 koneksi.Open();
-                string query = "INSERT INTO kontrak (id_kontrak, id_artis, id_produser, tanggal_mulai, tanggal_berakhir, nilai_kontrak) " +
-                               "VALUES (@id_kontrak, @id_artis, @id_produser, @tanggal_mulai, @tanggal_berakhir, @nilai_kontrak)";
-                SqlCommand cmd = new SqlCommand(query, koneksi);
-                cmd.Parameters.Add("@id_kontrak", idkontrak);
-                cmd.Parameters.Add("@id_artis", idartis);
-                cmd.Parameters.Add("@id_produser", idproduser);
-                cmd.Parameters.Add("@tanggal_mulai", tanggalMulai);
-                cmd.Parameters.Add("@tanggal_berakhir", tanggalBerakhir);
-                cmd.Parameters.AddWithValue("@nilai_kontrak", nilaiKontrak);
+                string str = "INSERT INTO lirik (id_lirik, judul, id_pencipta, nama_pencipta) VALUES (@id_lirik, @judul, @id_pencipta, @nama_pencipta)";
+                SqlCommand cmd = new SqlCommand(str, koneksi);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.Add(new SqlParameter("@id_kontrak", idkontrak));
+                cmd.Parameters.Add(new SqlParameter("@id_artis", idartis));
+                cmd.Parameters.Add(new SqlParameter("@id_produser", idproduser));
+                cmd.Parameters.Add(new SqlParameter("@tanggal_mulai", tanggalmulai));
+                cmd.Parameters.Add(new SqlParameter("@tanggal_berakhir", tanggalberakhir));
                 cmd.ExecuteNonQuery();
 
                 koneksi.Close();
-                MessageBox.Show("Data saved successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LoadData();
+                MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                datagridview1();
                 refreshform();
             }
         }
 
         private void btnback_Click(object sender, EventArgs e)
         {
-            Form1 frm = new Form1();
-            frm.Show();
-            this.Hide();
+
         }
 
         private void cbxproduser_SelectedIndexChanged(object sender, EventArgs e)
