@@ -24,6 +24,28 @@ namespace AlbumLagu
             this.bindingNavigator1.BindingSource = this.customerBindingSource;
             refreshform();
         }
+        private void DataArtis_Load()
+        {
+            koneksi.Open();
+            SqlDataAdapter dataAdapter1 = new SqlDataAdapter(new SqlCommand("Select id_artis, nama_artis, tanggal_lahir, genre, no_telepon from dbo.artis", koneksi));
+            DataSet ds = new DataSet();
+            dataAdapter1.Fill(ds);
+
+            this.customerBindingSource.DataSource = ds.Tables[0];
+            this.txtidartis.DataBindings.Add(
+                new Binding("Text", this.customerBindingSource, "id_artis", true));
+            this.txtnamaartis.DataBindings.Add(
+                new Binding("Text", this.customerBindingSource, "nama_artis", true));
+            this.dttl.DataBindings.Add(
+                new Binding("Date", this.customerBindingSource, "tanggal_lahir", true));
+            this.txtgenre.DataBindings.Add(
+                new Binding("Text", this.customerBindingSource, "genre", true));
+            this.txtnotelepon.DataBindings.Add(
+                new Binding("Text", this.customerBindingSource, "no_telepon", true));
+            koneksi.Close();
+
+        }
+
 
         private void refreshform()
         {

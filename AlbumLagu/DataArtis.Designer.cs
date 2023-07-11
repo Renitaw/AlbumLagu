@@ -52,7 +52,7 @@
             this.txtnamaartis = new System.Windows.Forms.TextBox();
             this.txtgenre = new System.Windows.Forms.TextBox();
             this.txtnotelepon = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dttl = new System.Windows.Forms.DateTimePicker();
             this.btnadd = new System.Windows.Forms.Button();
             this.btnsave = new System.Windows.Forms.Button();
             this.btnclear = new System.Windows.Forms.Button();
@@ -191,7 +191,7 @@
             this.tableLayoutPanel1.Controls.Add(this.txtnamaartis, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtgenre, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.txtnotelepon, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.dateTimePicker1, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.dttl, 1, 2);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(103, 101);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
@@ -293,12 +293,12 @@
             this.txtnotelepon.Size = new System.Drawing.Size(283, 26);
             this.txtnotelepon.TabIndex = 9;
             // 
-            // dateTimePicker1
+            // dttl
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(291, 107);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(283, 26);
-            this.dateTimePicker1.TabIndex = 10;
+            this.dttl.Location = new System.Drawing.Point(291, 107);
+            this.dttl.Name = "dttl";
+            this.dttl.Size = new System.Drawing.Size(283, 26);
+            this.dttl.TabIndex = 10;
             // 
             // btnadd
             // 
@@ -387,7 +387,7 @@
         private System.Windows.Forms.Button btnadd;
         private System.Windows.Forms.Button btnsave;
         private System.Windows.Forms.Button btnclear;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dttl;
         private System.Windows.Forms.Label label6;
     }
 }
