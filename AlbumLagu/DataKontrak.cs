@@ -128,7 +128,9 @@ namespace AlbumLagu
 
         private void btnback_Click(object sender, EventArgs e)
         {
-
+            Form1 frm = new Form1();
+            frm.Show();
+            this.Hide();
         }
 
         private void cbxproduser_SelectedIndexChanged(object sender, EventArgs e)
