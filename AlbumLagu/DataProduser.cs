@@ -70,6 +70,23 @@ namespace AlbumLagu
             refreshform();
         }
 
+        private void btnadd_Click(object sender, EventArgs e)
+        {
+            txtidproduser.Text = "";
+            txtnamaproduser.Text = "";
+            txtperusahaan.Text = "";
+            txtalamat.Text = "";
+            txtnotelepon.Text = "";
+            txtidproduser.Enabled = true;
+            txtnamaproduser.Enabled = true;
+            txtperusahaan.Enabled = true;
+            txtalamat.Enabled = true;
+            txtnotelepon.Enabled = true;
+            btnsave.Enabled = true;
+            btnclear.Enabled = true;
+            btnadd.Enabled = false;
+        }
+
         private void clearBinding()
         {
             this.txtidproduser.DataBindings.Clear();
