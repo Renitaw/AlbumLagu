@@ -36,12 +36,12 @@
             this.txtiddaftarputar = new System.Windows.Forms.TextBox();
             this.txtnamadaftar = new System.Windows.Forms.TextBox();
             this.txtidpengguna = new System.Windows.Forms.TextBox();
-            this.txtidlagu = new System.Windows.Forms.TextBox();
             this.btnadd = new System.Windows.Forms.Button();
             this.btnsave = new System.Windows.Forms.Button();
             this.btnclear = new System.Windows.Forms.Button();
             this.btnopen = new System.Windows.Forms.Button();
             this.btnback = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -112,13 +112,6 @@
             this.txtidpengguna.Size = new System.Drawing.Size(265, 26);
             this.txtidpengguna.TabIndex = 7;
             // 
-            // txtidlagu
-            // 
-            this.txtidlagu.Location = new System.Drawing.Point(321, 348);
-            this.txtidlagu.Name = "txtidlagu";
-            this.txtidlagu.Size = new System.Drawing.Size(265, 26);
-            this.txtidlagu.TabIndex = 8;
-            // 
             // btnadd
             // 
             this.btnadd.Location = new System.Drawing.Point(203, 406);
@@ -164,17 +157,25 @@
             this.btnback.Text = "Back";
             this.btnback.UseVisualStyleBackColor = true;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(321, 354);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(265, 28);
+            this.comboBox1.TabIndex = 14;
+            // 
             // DataDaftarPutar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btnback);
             this.Controls.Add(this.btnopen);
             this.Controls.Add(this.btnclear);
             this.Controls.Add(this.btnsave);
             this.Controls.Add(this.btnadd);
-            this.Controls.Add(this.txtidlagu);
             this.Controls.Add(this.txtidpengguna);
             this.Controls.Add(this.txtnamadaftar);
             this.Controls.Add(this.txtiddaftarputar);
@@ -202,11 +203,11 @@
         private System.Windows.Forms.TextBox txtiddaftarputar;
         private System.Windows.Forms.TextBox txtnamadaftar;
         private System.Windows.Forms.TextBox txtidpengguna;
-        private System.Windows.Forms.TextBox txtidlagu;
         private System.Windows.Forms.Button btnadd;
         private System.Windows.Forms.Button btnsave;
         private System.Windows.Forms.Button btnclear;
         private System.Windows.Forms.Button btnopen;
         private System.Windows.Forms.Button btnback;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
