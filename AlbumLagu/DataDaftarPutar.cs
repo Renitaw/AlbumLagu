@@ -67,7 +67,7 @@ namespace AlbumLagu
 
         private void DataDaftarPutar_Load(object sender, EventArgs e)
         {
-
+            FillComboBox();
         }
 
         private void btnclear_Click(object sender, EventArgs e)
@@ -116,7 +116,7 @@ namespace AlbumLagu
             else
             {
                 koneksi.Open();
-                string str = "INSERT INTO daftar_putar (id_daftar_putar, nama_daftar, id_pengguna, id_lagu) VALUES (@id_daftar_putar, @nama_daftar, @id_pengguna, @id_lagu)";
+                string str = "INSERT INTO daftar_putar (id_daftar_putar, nama_daftar, id_pengguna) VALUES (@id_daftar_putar, @nama_daftar, @id_pengguna)";
                 SqlCommand cmd = new SqlCommand(str, koneksi);
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.Add(new SqlParameter("@id_daftar_putar", iddaftarputar));
@@ -131,7 +131,18 @@ namespace AlbumLagu
             }
         }
 
-
+        private void FillComboBox()
+        {
+            koneksi.Open();
+            string query = "SELECT id_lagu FROM dbo.lagu";
+            SqlDataAdapter adapter = new SqlDataAdapter(query, koneksi);
+            DataSet dataset = new DataSet();
+            adapter.Fill(dataset, "Lagu");
+            cbxidlagu.DisplayMember = "id_lagu";
+            cbxidlagu.ValueMember = "id_lagu";
+            cbxidlagu.DataSource = dataset.Tables["Lagu"];
+            koneksi.Close();
+        }
 
         private void btnback_Click(object sender, EventArgs e)
         {
