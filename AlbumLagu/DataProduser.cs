@@ -20,6 +20,15 @@ namespace AlbumLagu
         public DataProduser()
         {
             InitializeComponent();
+            koneksi = new SqlConnection(stringConnection);
+            this.bindingNavigator1.BindingSource = this.customerBindingSource;
+            refreshform();
+        }
+
+        private void refreshform()
+        {
+
+
         }
 
         private void label6_Click(object sender, EventArgs e)
