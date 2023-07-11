@@ -102,41 +102,27 @@ namespace AlbumLagu
             string judul = cbxjudul.Text;
             string idpencipta = cbxidpencipta.Text;
             string namapencipta = cbxnamapencipta.Text;
-            int count = 0;
-            string tempKodelirik = "";
-            string kodelirik = "";
-            koneksi.Open();
 
-            string str = "select count (*) from dbo.lirik";
-            SqlCommand cm = new SqlCommand(str, koneksi);
-            count = (int)cm.ExecuteScalar();
-            if (count == 0)
+            if (idlirik == "")
             {
-                kodelirik = "1";
+                MessageBox.Show("Masukkan Id Lirik", "Warning", MessageBoxButtons.OK,MessageBoxIcon.Warning);
+            }
+            if (judul == "")
+            {
+                MessageBox.Show("Masukkan judul", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (idpencipta == "")
+            {
+                MessageBox.Show("Masukkan idpencipta", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if(namapencipta == "")
+            {
+                MessageBox.Show("Masukkan namapencipta", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                string queryString = "select Max(id_lirik) from dbo.lirik";
-                SqlCommand cmlirik = new SqlCommand(str, koneksi);
-                int totallirik = (int)cmlirik.ExecuteScalar();
-                int finalKodelirikInt = totallirik+ 1;
-                kodelirik = Convert.ToString(finalKodelirikInt);
+                
             }
-            string queryStrings = "insert into dbo.status_mahasiswa (idlirik ,judul ," + "status_mahasiswa, tahun_masuk)" + "values(@ids, @NIM, @sm, @tm)";
-            SqlCommand cmd = new SqlCommand(queryStrings, koneksi);
-            cmd.CommandType = CommandType.Text;
-
-            cmd.Parameters.Add(new SqlParameter("idlirik", kodelirik));
-            cmd.Parameters.Add(new SqlParameter("judl",judul ));
-            cmd.Parameters.Add(new SqlParameter("idpencipta", idpencipta));
-            cmd.Parameters.Add(new SqlParameter("namapencipta", namapencipta));
-            cmd.ExecuteNonQuery();
-            koneksi.Close();
-
-            MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            refreshform();
-            datagridview1();
-
         }
 
         private void btnback_Click(object sender, EventArgs e)
