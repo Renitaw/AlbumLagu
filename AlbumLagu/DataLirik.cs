@@ -102,7 +102,21 @@ namespace AlbumLagu
             }
             else
             {
-                
+                koneksi.Open();
+                string str = " INSERT INTO lirik (id_lirik, judul, id_pencipta, nama_pencipta) VALUES (@id_lirik, @judul, @id_pencipta, @nama_pencipta";
+                SqlCommand cmd = new SqlCommand(str, koneksi);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.Add(new SqlParameter("@id_lirik", idlirik));
+                cmd.Parameters.Add(new SqlParameter("@judul", judul));
+                cmd.Parameters.Add(new SqlParameter("@id_pencipta", idpencipta));
+                cmd.Parameters.Add(new SqlParameter("@nama_pencipta", namapencipta));
+                cmd.ExecuteReader();
+
+                koneksi.Close();
+                MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                datagridview1();
+                refreshform();
+                             
             }
         }
 
