@@ -24,6 +24,24 @@ namespace AlbumLagu
             this.bindingNavigator1.BindingSource = this.customerBindingSource;
             refreshform();
         }
+
+        private void btnadd_Click(object sender, EventArgs e)
+        {
+            txtidartis.Text = "";
+            txtnamaartis.Text = "";
+            dttl.Text = "";
+            txtgenre.Text = "";
+            txtnotelepon.Text = "";
+            txtidartis.Enabled = true;
+            txtnamaartis.Enabled = true;
+            dttl.Enabled = true;
+            txtgenre.Enabled = true;
+            txtnotelepon.Enabled = true;
+            btnsave.Enabled = true;
+            btnclear.Enabled = true;
+            btnadd.Enabled = false;
+        }
+
         private void DataArtis_Load()
         {
             koneksi.Open();
