@@ -15,7 +15,8 @@ namespace AlbumLagu
     {
         private string stringConnection = "data source=RENITAWIDIASTUT\\RENITAWDST;database=ALBUMLAGUUAS;User ID=sa; Password=Rere2607";
         private SqlConnection koneksi;
-        private string idartis, namaartis,tanggallahir, genre, notelepon;
+        private string idartis, namaartis, genre, notelepon;
+        private DateTime tanggalLahir = DateTime.Today;
         BindingSource customerBindingSource = new BindingSource();
         public DataArtis()
         {
@@ -46,7 +47,7 @@ namespace AlbumLagu
         {
             idartis = txtidartis.Text;
             namaartis = txtnamaartis.Text;
-            tanggallahir = dttl.Text;
+            tanggalLahir = dttl.Value;
             genre = txtgenre.Text;
             notelepon = txtnotelepon.Text;
             koneksi.Open();
@@ -56,7 +57,7 @@ namespace AlbumLagu
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.Add(new SqlParameter("@IDartis", idartis));
             cmd.Parameters.Add(new SqlParameter("@Namaartis", namaartis));
-            cmd.Parameters.Add(new SqlParameter("@tanggallahir", tanggallahir));
+            cmd.Parameters.Add(new SqlParameter("@tanggallahir", tanggalLahir));
             cmd.Parameters.Add(new SqlParameter("@genre", genre));
             cmd.Parameters.Add(new SqlParameter("@notelepon", notelepon));
             cmd.ExecuteNonQuery();
@@ -90,7 +91,7 @@ namespace AlbumLagu
             this.txtnamaartis.DataBindings.Add(
                 new Binding("Text", this.customerBindingSource, "nama_artis", true));
             this.dttl.DataBindings.Add(
-                new Binding("Date", this.customerBindingSource, "tanggal_lahir", true));
+                new Binding("Text", this.customerBindingSource, "tanggal_lahir", true));
             this.txtgenre.DataBindings.Add(
                 new Binding("Text", this.customerBindingSource, "genre", true));
             this.txtnotelepon.DataBindings.Add(

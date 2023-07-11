@@ -52,12 +52,12 @@
             this.txtnamaartis = new System.Windows.Forms.TextBox();
             this.txtgenre = new System.Windows.Forms.TextBox();
             this.txtnotelepon = new System.Windows.Forms.TextBox();
-            this.dttl = new System.Windows.Forms.DateTimePicker();
             this.btnadd = new System.Windows.Forms.Button();
             this.btnsave = new System.Windows.Forms.Button();
             this.btnclear = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.btnback = new System.Windows.Forms.Button();
+            this.dttl = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -294,13 +294,6 @@
             this.txtnotelepon.Size = new System.Drawing.Size(283, 26);
             this.txtnotelepon.TabIndex = 9;
             // 
-            // dttl
-            // 
-            this.dttl.Location = new System.Drawing.Point(291, 107);
-            this.dttl.Name = "dttl";
-            this.dttl.Size = new System.Drawing.Size(283, 26);
-            this.dttl.TabIndex = 10;
-            // 
             // btnadd
             // 
             this.btnadd.Location = new System.Drawing.Point(136, 395);
@@ -349,6 +342,13 @@
             this.btnback.Text = "Back";
             this.btnback.UseVisualStyleBackColor = true;
             this.btnback.Click += new System.EventHandler(this.btnback_Click);
+            // 
+            // dttl
+            // 
+            this.dttl.Location = new System.Drawing.Point(291, 107);
+            this.dttl.Name = "dttl";
+            this.dttl.Size = new System.Drawing.Size(283, 26);
+            this.dttl.TabIndex = 10;
             // 
             // DataArtis
             // 
@@ -402,8 +402,8 @@
         private System.Windows.Forms.Button btnadd;
         private System.Windows.Forms.Button btnsave;
         private System.Windows.Forms.Button btnclear;
-        private System.Windows.Forms.DateTimePicker dttl;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnback;
+        private System.Windows.Forms.DateTimePicker dttl;
     }
 }
