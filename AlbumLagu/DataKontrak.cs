@@ -184,24 +184,9 @@ namespace AlbumLagu
             DateTime tanggalberakhir = dttb.Value;
             string nilaikontrak = txtnilaikontrak.Text;
 
-            if (string.IsNullOrEmpty(idkontrak))
+            if (string.IsNullOrEmpty(idkontrak) || string.IsNullOrEmpty(idartis) || string.IsNullOrEmpty(idproduser) || string.IsNullOrEmpty(nilaikontrak))
             {
-                MessageBox.Show("ID Kontrak tidak valid", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            if (string.IsNullOrEmpty(idartis))
-            {
-                MessageBox.Show("Pilih ID Artis", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            if (string.IsNullOrEmpty(idproduser))
-            {
-                MessageBox.Show("Pilih ID Produser", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            if (string.IsNullOrEmpty(nilaikontrak))
-            {
-                MessageBox.Show("Masukkan Nilai Kontrak", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Harap lengkapi semua field", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -222,7 +207,6 @@ namespace AlbumLagu
                     if (rowsAffected > 0)
                     {
                         MessageBox.Show("Data berhasil diperbarui", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        koneksi.Close();
                         refreshform();
                         datagridview1();
                     }
@@ -234,6 +218,10 @@ namespace AlbumLagu
                 catch (Exception ex)
                 {
                     MessageBox.Show("Terjadi kesalahan: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    koneksi.Close();
                 }
             }
         }

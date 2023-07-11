@@ -66,6 +66,7 @@
             // bindingNavigator1
             // 
             this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.bindingNavigator1.BackColor = System.Drawing.Color.Linen;
             this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
             this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem;
             this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(24, 24);
@@ -306,58 +307,69 @@
             // 
             // btnadd
             // 
+            this.btnadd.BackColor = System.Drawing.Color.SaddleBrown;
+            this.btnadd.ForeColor = System.Drawing.SystemColors.Info;
             this.btnadd.Location = new System.Drawing.Point(150, 396);
             this.btnadd.Name = "btnadd";
             this.btnadd.Size = new System.Drawing.Size(75, 42);
             this.btnadd.TabIndex = 2;
             this.btnadd.Text = "Add";
-            this.btnadd.UseVisualStyleBackColor = true;
+            this.btnadd.UseVisualStyleBackColor = false;
             this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
             // btnsave
             // 
+            this.btnsave.BackColor = System.Drawing.Color.SaddleBrown;
+            this.btnsave.ForeColor = System.Drawing.SystemColors.Info;
             this.btnsave.Location = new System.Drawing.Point(364, 397);
             this.btnsave.Name = "btnsave";
             this.btnsave.Size = new System.Drawing.Size(75, 43);
             this.btnsave.TabIndex = 3;
             this.btnsave.Text = "Save";
-            this.btnsave.UseVisualStyleBackColor = true;
+            this.btnsave.UseVisualStyleBackColor = false;
             this.btnsave.Click += new System.EventHandler(this.btnsave_Click);
             // 
             // btnclear
             // 
+            this.btnclear.BackColor = System.Drawing.Color.SaddleBrown;
+            this.btnclear.ForeColor = System.Drawing.SystemColors.Info;
             this.btnclear.Location = new System.Drawing.Point(611, 396);
             this.btnclear.Name = "btnclear";
             this.btnclear.Size = new System.Drawing.Size(75, 42);
             this.btnclear.TabIndex = 4;
             this.btnclear.Text = "Clear";
-            this.btnclear.UseVisualStyleBackColor = true;
+            this.btnclear.UseVisualStyleBackColor = false;
             this.btnclear.Click += new System.EventHandler(this.btnclear_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(345, 72);
+            this.label6.BackColor = System.Drawing.Color.Linen;
+            this.label6.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(298, 79);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(148, 20);
+            this.label6.Size = new System.Drawing.Size(247, 28);
             this.label6.TabIndex = 5;
             this.label6.Text = "DATA PRODUSER";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // btnback
             // 
+            this.btnback.BackColor = System.Drawing.Color.SaddleBrown;
+            this.btnback.ForeColor = System.Drawing.SystemColors.Info;
             this.btnback.Location = new System.Drawing.Point(41, 67);
             this.btnback.Name = "btnback";
             this.btnback.Size = new System.Drawing.Size(75, 30);
             this.btnback.TabIndex = 6;
             this.btnback.Text = "Back";
-            this.btnback.UseVisualStyleBackColor = true;
+            this.btnback.UseVisualStyleBackColor = false;
             this.btnback.Click += new System.EventHandler(this.btnback_Click);
             // 
             // DataProduser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkSalmon;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnback);
             this.Controls.Add(this.label6);
