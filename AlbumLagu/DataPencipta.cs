@@ -83,9 +83,7 @@ namespace AlbumLagu
             cmd.Parameters.Add(new SqlParameter("@Nm", namapencipta));
             cmd.ExecuteNonQuery();
             koneksi.Close();
-
             MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
             refreshform();
         }
 

@@ -29,10 +29,6 @@ namespace AlbumLagu
             cbxjudul.Enabled = false;
             cbxidpencipta.Enabled = false;
             cbxnamapencipta.Enabled= false;
-            txtidlirik.Visible = false;
-            cbxjudul.SelectedIndex = -1;
-            cbxidpencipta.SelectedIndex = -1;
-            cbxnamapencipta.SelectedIndex = -1;
             btnsave.Enabled = false;
             btnclear.Enabled = false;
             btnadd.Enabled = true;

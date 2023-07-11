@@ -71,5 +71,47 @@ namespace AlbumLagu
             btnsave.Enabled = true;
             btnadd.Enabled = false;
         }
+
+        private void btnsave_Click(object sender, EventArgs e)
+        {
+            string iddaftarputar = txtiddaftarputar.Text;
+            string namadaftar = txtnamadaftar.Text;
+            string idpengguna = txtidpengguna.Text;
+            string idlagu = cbxidlagu.Text;
+
+            if (iddaftarputar == "")
+            {
+                MessageBox.Show("Masukkan iddaftarputar", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (namadaftar == "")
+            {
+                MessageBox.Show("Masukkan namadaftar", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (idpengguna == "")
+            {
+                MessageBox.Show("Masukkan idpengguna", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (idlagu == "")
+            {
+                MessageBox.Show("Masukkan idlagu", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                koneksi.Open();
+                string str = "INSERT INTO lirik (id_daftar_putar, nama_daftar, id_pengguna, id_lagu) VALUES (@id_daftar_putar, @nama_daftar, @id_pengguna, @id_lagu";
+                SqlCommand cmd = new SqlCommand(str, koneksi);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.Add(new SqlParameter("@id_daftar_putar", iddaftarputar));
+                cmd.Parameters.Add(new SqlParameter("@nama_daftar", namadaftar));
+                cmd.Parameters.Add(new SqlParameter("@id_pengguna", idpengguna));
+                cmd.Parameters.Add(new SqlParameter("@id_lagu", idlagu));
+                cmd.ExecuteNonQuery();
+
+                koneksi.Close();
+                MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                datagridview1();
+                refreshform();
+            }
+        }
     }
 }
