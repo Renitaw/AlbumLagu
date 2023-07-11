@@ -41,7 +41,7 @@
             this.btnclear = new System.Windows.Forms.Button();
             this.btnopen = new System.Windows.Forms.Button();
             this.btnback = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbxidlagu = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -157,20 +157,20 @@
             this.btnback.Text = "Back";
             this.btnback.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // cbxidlagu
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(321, 354);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(265, 28);
-            this.comboBox1.TabIndex = 14;
+            this.cbxidlagu.FormattingEnabled = true;
+            this.cbxidlagu.Location = new System.Drawing.Point(321, 354);
+            this.cbxidlagu.Name = "cbxidlagu";
+            this.cbxidlagu.Size = new System.Drawing.Size(265, 28);
+            this.cbxidlagu.TabIndex = 14;
             // 
             // DataDaftarPutar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbxidlagu);
             this.Controls.Add(this.btnback);
             this.Controls.Add(this.btnopen);
             this.Controls.Add(this.btnclear);
@@ -208,6 +208,6 @@
         private System.Windows.Forms.Button btnclear;
         private System.Windows.Forms.Button btnopen;
         private System.Windows.Forms.Button btnback;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbxidlagu;
     }
 }

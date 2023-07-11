@@ -24,7 +24,13 @@ namespace AlbumLagu
 
         private void refreshform()
         {
-
+            txtiddaftarputar.Enabled = false;
+            txtnamadaftar.Enabled = false;
+            txtidpengguna.Enabled = false;
+            cbxidlagu.Enabled = false;
+            btnsave.Enabled = false;
+            btnclear.Enabled = false;
+            btnadd.Enabled = true;
 
         }
 
