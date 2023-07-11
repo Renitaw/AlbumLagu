@@ -70,6 +70,13 @@ namespace AlbumLagu
             refreshform();
         }
 
+        private void btnback_Click(object sender, EventArgs e)
+        {
+            Form1 frm = new Form1();
+            frm.Show();
+            this.Hide();
+        }
+
         private void DataArtis_Load()
         {
             koneksi.Open();
