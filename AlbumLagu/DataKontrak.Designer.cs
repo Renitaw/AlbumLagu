@@ -32,7 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.dttm = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtidkontrak = new System.Windows.Forms.TextBox();
@@ -40,8 +40,8 @@
             this.btnadd = new System.Windows.Forms.Button();
             this.btnsave = new System.Windows.Forms.Button();
             this.btnclear = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtm = new System.Windows.Forms.DateTimePicker();
+            this.dttb = new System.Windows.Forms.DateTimePicker();
             this.btnopen = new System.Windows.Forms.Button();
             this.btnback = new System.Windows.Forms.Button();
             this.cbxidartis = new System.Windows.Forms.ComboBox();
@@ -86,14 +86,14 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "ID Produser";
             // 
-            // label4
+            // dttm
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(213, 332);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 20);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Tanggal Lahir";
+            this.dttm.AutoSize = true;
+            this.dttm.Location = new System.Drawing.Point(213, 332);
+            this.dttm.Name = "dttm";
+            this.dttm.Size = new System.Drawing.Size(107, 20);
+            this.dttm.TabIndex = 4;
+            this.dttm.Text = "Tanggal Mulai";
             // 
             // label5
             // 
@@ -157,19 +157,19 @@
             this.btnclear.UseVisualStyleBackColor = true;
             this.btnclear.Click += new System.EventHandler(this.btnclear_Click);
             // 
-            // dateTimePicker1
+            // dtm
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(348, 332);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(272, 26);
-            this.dateTimePicker1.TabIndex = 16;
+            this.dtm.Location = new System.Drawing.Point(348, 332);
+            this.dtm.Name = "dtm";
+            this.dtm.Size = new System.Drawing.Size(272, 26);
+            this.dtm.TabIndex = 16;
             // 
-            // dateTimePicker2
+            // dttb
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(348, 365);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(272, 26);
-            this.dateTimePicker2.TabIndex = 17;
+            this.dttb.Location = new System.Drawing.Point(348, 365);
+            this.dttb.Name = "dttb";
+            this.dttb.Size = new System.Drawing.Size(272, 26);
+            this.dttb.TabIndex = 17;
             // 
             // btnopen
             // 
@@ -217,8 +217,8 @@
             this.Controls.Add(this.cbxidartis);
             this.Controls.Add(this.btnback);
             this.Controls.Add(this.btnopen);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dttb);
+            this.Controls.Add(this.dtm);
             this.Controls.Add(this.btnclear);
             this.Controls.Add(this.btnsave);
             this.Controls.Add(this.btnadd);
@@ -226,7 +226,7 @@
             this.Controls.Add(this.txtidkontrak);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.dttm);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -246,7 +246,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label dttm;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtidkontrak;
@@ -254,8 +254,8 @@
         private System.Windows.Forms.Button btnadd;
         private System.Windows.Forms.Button btnsave;
         private System.Windows.Forms.Button btnclear;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtm;
+        private System.Windows.Forms.DateTimePicker dttb;
         private System.Windows.Forms.Button btnopen;
         private System.Windows.Forms.Button btnback;
         private System.Windows.Forms.ComboBox cbxidartis;

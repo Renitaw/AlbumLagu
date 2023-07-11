@@ -43,15 +43,14 @@ namespace AlbumLagu
         }
         private void refreshform()
         {
-            cbxidartis.Enabled = false;
             txtidkontrak.Enabled = false;
+            cbxidartis.Enabled = false;
             cbxidproduser.Enabled = false;
-            txtnilaikontrak.Enabled = false;
+            dtm.Enabled = false;
+            dttb.Enabled = false;
             btnsave.Enabled = false;
             btnclear.Enabled = false;
-            clearBinding();
-            LoadData();
-
+            btnadd.Enabled = true;
         }
         private void clearBinding()
         {
@@ -77,8 +76,8 @@ namespace AlbumLagu
             txtidkontrak.Enabled = true;
             cbxidartis.Enabled = true;
             cbxidproduser.Enabled = true;
-            dateTimePicker1.Enabled = true;
-            dateTimePicker2.Enabled = true;
+            dtm.Enabled = true;
+            dttb.Enabled = true;
             txtnilaikontrak.Enabled = true;
             btnsave.Enabled = true;
             btnclear.Enabled = true;
@@ -89,8 +88,8 @@ namespace AlbumLagu
             string idkontrak = txtidkontrak.Text;
             string idartis = cbxidartis.Text;
             string idproduser = cbxidproduser.Text;
-            DateTime tanggalMulai = dateTimePicker1.Value;
-            DateTime tanggalBerakhir = dateTimePicker2.Value;
+            DateTime tanggalMulai = dtm.Value;
+            DateTime tanggalBerakhir = dttb.Value;
             int nilaiKontrak = 0;
             if (!int.TryParse(txtnilaikontrak.Text, out nilaiKontrak))
             {

@@ -99,7 +99,7 @@ namespace AlbumLagu
             else
             {
                 koneksi.Open();
-                string str = " INSERT INTO lirik (id_lirik, judul, id_pencipta, nama_pencipta) VALUES (@id_lirik, @judul, @id_pencipta, @nama_pencipta";
+                string str = " insert into lirik (id_lirik, judul, id_pencipta, nama_pencipta) VALUES (@id_lirik, @judul, @id_pencipta, @nama_pencipta";
                 SqlCommand cmd = new SqlCommand(str, koneksi);
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.Add(new SqlParameter("@id_lirik", idlirik));
