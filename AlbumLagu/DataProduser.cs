@@ -25,6 +25,28 @@ namespace AlbumLagu
             refreshform();
         }
 
+        private void DataProduser_Load()
+        {
+            koneksi.Open();
+            SqlDataAdapter dataAdapter1 = new SqlDataAdapter(new SqlCommand("Select id_produser, nama_produser, perusahaan, alamat, no_telepon from dbo.produser", koneksi));
+            DataSet ds = new DataSet();
+            dataAdapter1.Fill(ds);
+
+            this.customerBindingSource.DataSource = ds.Tables[0];
+            this.txtidproduser.DataBindings.Add(
+                new Binding("Text", this.customerBindingSource, "id_produser", true));
+            this.txtnamaproduser.DataBindings.Add(
+                new Binding("Text", this.customerBindingSource, "nama_produser", true));
+            this.txtperusahaan.DataBindings.Add(
+                 new Binding("Text", this.customerBindingSource, "perusahaan", true));
+            this.txtalamat.DataBindings.Add(
+                 new Binding("Text", this.customerBindingSource, "alamat", true));
+            this.txtnotelepon.DataBindings.Add(
+                 new Binding("Text", this.customerBindingSource, "no_telepon", true));
+            koneksi.Close();
+
+        }
+
         private void refreshform()
         {
 

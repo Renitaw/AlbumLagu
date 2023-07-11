@@ -51,7 +51,7 @@
             this.txtidproduser = new System.Windows.Forms.TextBox();
             this.txtnamaproduser = new System.Windows.Forms.TextBox();
             this.txtperusahaan = new System.Windows.Forms.TextBox();
-            this.txttalamat = new System.Windows.Forms.TextBox();
+            this.txtalamat = new System.Windows.Forms.TextBox();
             this.txtnotelepon = new System.Windows.Forms.TextBox();
             this.btnadd = new System.Windows.Forms.Button();
             this.btnsave = new System.Windows.Forms.Button();
@@ -190,7 +190,7 @@
             this.tableLayoutPanel1.Controls.Add(this.txtidproduser, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtnamaproduser, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtperusahaan, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.txttalamat, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.txtalamat, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.txtnotelepon, 1, 4);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(134, 136);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -283,15 +283,15 @@
             this.txtperusahaan.Size = new System.Drawing.Size(283, 26);
             this.txtperusahaan.TabIndex = 7;
             // 
-            // txttalamat
+            // txtalamat
             // 
-            this.txttalamat.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtalamat.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txttalamat.Location = new System.Drawing.Point(292, 148);
-            this.txttalamat.Name = "txttalamat";
-            this.txttalamat.Size = new System.Drawing.Size(283, 26);
-            this.txttalamat.TabIndex = 8;
+            this.txtalamat.Location = new System.Drawing.Point(292, 148);
+            this.txtalamat.Name = "txtalamat";
+            this.txtalamat.Size = new System.Drawing.Size(283, 26);
+            this.txtalamat.TabIndex = 8;
             // 
             // txtnotelepon
             // 
@@ -387,7 +387,7 @@
         private System.Windows.Forms.TextBox txtidproduser;
         private System.Windows.Forms.TextBox txtnamaproduser;
         private System.Windows.Forms.TextBox txtperusahaan;
-        private System.Windows.Forms.TextBox txttalamat;
+        private System.Windows.Forms.TextBox txtalamat;
         private System.Windows.Forms.TextBox txtnotelepon;
         private System.Windows.Forms.Button btnadd;
         private System.Windows.Forms.Button btnsave;
