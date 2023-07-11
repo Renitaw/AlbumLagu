@@ -28,7 +28,7 @@ namespace AlbumLagu
             txtidlirik.Enabled = false;
             cbxjudul.Enabled = false;
             cbxidpencipta.Enabled = false;
-            cbxnamapencipta.Enabled= false;
+            cbxnamapencipta.Enabled = false;
             btnsave.Enabled = false;
             btnclear.Enabled = false;
             btnadd.Enabled = true;
@@ -129,7 +129,7 @@ namespace AlbumLagu
                 cbxjudul.Items.Add(judul);
             }
             reader.Close();
-                string penciptaQuery = "SELECT id_pencipta, nama_pencipta FROM dbo.pencipta";
+            string penciptaQuery = "SELECT id_pencipta, nama_pencipta FROM dbo.pencipta";
             SqlCommand penciptaCommand = new SqlCommand(penciptaQuery, koneksi);
             SqlDataReader penciptaReader = penciptaCommand.ExecuteReader();
 
@@ -140,9 +140,9 @@ namespace AlbumLagu
 
                 cbxidpencipta.Items.Add(idPencipta);
                 cbxnamapencipta.Items.Add(namaPencipta);
-    }
+            }
 
-    penciptaReader.Close();
+            penciptaReader.Close();
 
             koneksi.Close();
         }
@@ -156,7 +156,112 @@ namespace AlbumLagu
 
         private void cbxjudul_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+
+        }
+
+        private void btnupdate_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Pilih baris data yang akan diperbarui", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+            string idlirik = selectedRow.Cells["id_lirik"].Value?.ToString();
+            string judul = cbxjudul.Text;
+            string idpencipta = cbxidpencipta.Text;
+            string namapencipta = cbxnamapencipta.Text;
+
+            if (string.IsNullOrEmpty(idlirik))
+            {
+                MessageBox.Show("ID Lirik tidak valid", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (judul == "")
+            {
+                MessageBox.Show("Masukkan Nama Judul", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (idpencipta == "")
+            {
+                MessageBox.Show("Masukkan ID Pencipta", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (namapencipta == "")
+            {
+                MessageBox.Show("Masukkan Nama Pencipta", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string sql = "UPDATE lirik SET judul = @judul, id_pencipta = @id_pencipta, nama_pencipta = @nama_pencipta WHERE id_lirik = @id_lirik";
+            using (SqlCommand command = new SqlCommand(sql, koneksi))
+            {
+                command.Parameters.AddWithValue("@id_lirik", idlirik);
+                command.Parameters.AddWithValue("@judul", judul);
+                command.Parameters.AddWithValue("@id_pencipta", idpencipta);
+                command.Parameters.AddWithValue("@nama_pencipta", namapencipta);
+
+                try
+                {
+                    koneksi.Open();
+                    int rowsAffected = command.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Data berhasil diperbarui", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        koneksi.Close();
+                        refreshform();
+                        datagridview1();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Data tidak ditemukan.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Terjadi kesalahan: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+        }
+
+        private void btndlt_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Pilih baris data yang akan dihapus", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string id = dataGridView1.SelectedRows[0].Cells["id_lirik"].Value.ToString();
+
+            string sql = "DELETE FROM lirik WHERE id_lirik = @id_lirik";
+            using (SqlCommand command = new SqlCommand(sql, koneksi))
+            {
+                command.Parameters.AddWithValue("@id_lirik", id);
+
+                try
+                {
+                    koneksi.Open();
+                    int rowsAffected = command.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Data berhasil dihapus", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        koneksi.Close();
+                        refreshform();
+                        datagridview1();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Data tidak ditemukan.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Terjadi kesalahan: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }

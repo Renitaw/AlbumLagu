@@ -43,6 +43,8 @@
             this.cbxnamapencipta = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtidlirik = new System.Windows.Forms.TextBox();
+            this.btnupdate = new System.Windows.Forms.Button();
+            this.btndlt = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -182,11 +184,33 @@
             this.txtidlirik.Size = new System.Drawing.Size(262, 26);
             this.txtidlirik.TabIndex = 19;
             // 
+            // btnupdate
+            // 
+            this.btnupdate.Location = new System.Drawing.Point(626, 84);
+            this.btnupdate.Name = "btnupdate";
+            this.btnupdate.Size = new System.Drawing.Size(75, 34);
+            this.btnupdate.TabIndex = 20;
+            this.btnupdate.Text = "Update";
+            this.btnupdate.UseVisualStyleBackColor = true;
+            this.btnupdate.Click += new System.EventHandler(this.btnupdate_Click);
+            // 
+            // btndlt
+            // 
+            this.btndlt.Location = new System.Drawing.Point(626, 143);
+            this.btndlt.Name = "btndlt";
+            this.btndlt.Size = new System.Drawing.Size(75, 37);
+            this.btndlt.TabIndex = 21;
+            this.btndlt.Text = "Delete";
+            this.btndlt.UseVisualStyleBackColor = true;
+            this.btndlt.Click += new System.EventHandler(this.btndlt_Click);
+            // 
             // DataLirik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btndlt);
+            this.Controls.Add(this.btnupdate);
             this.Controls.Add(this.txtidlirik);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cbxnamapencipta);
@@ -228,5 +252,7 @@
         private System.Windows.Forms.ComboBox cbxnamapencipta;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtidlirik;
+        private System.Windows.Forms.Button btnupdate;
+        private System.Windows.Forms.Button btndlt;
     }
 }
