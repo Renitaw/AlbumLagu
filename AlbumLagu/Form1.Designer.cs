@@ -51,7 +51,7 @@
             this.toolStripDropDownButton2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(800, 34);
+            this.toolStrip1.Size = new System.Drawing.Size(533, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -66,41 +66,41 @@
             this.dataproduser});
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(124, 29);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(82, 22);
             this.toolStripDropDownButton1.Text = "Data Utama";
             // 
             // datapencipta
             // 
             this.datapencipta.Name = "datapencipta";
-            this.datapencipta.Size = new System.Drawing.Size(270, 34);
+            this.datapencipta.Size = new System.Drawing.Size(148, 22);
             this.datapencipta.Text = "Data Pencipta";
             this.datapencipta.Click += new System.EventHandler(this.dataUtamaToolStripMenuItem_Click);
             // 
             // datalagu
             // 
             this.datalagu.Name = "datalagu";
-            this.datalagu.Size = new System.Drawing.Size(270, 34);
+            this.datalagu.Size = new System.Drawing.Size(148, 22);
             this.datalagu.Text = "Data Lagu";
             this.datalagu.Click += new System.EventHandler(this.dataPenciptaToolStripMenuItem_Click);
             // 
             // dataalbum
             // 
             this.dataalbum.Name = "dataalbum";
-            this.dataalbum.Size = new System.Drawing.Size(270, 34);
+            this.dataalbum.Size = new System.Drawing.Size(148, 22);
             this.dataalbum.Text = "Data Album";
             this.dataalbum.Click += new System.EventHandler(this.dataLaguToolStripMenuItem_Click);
             // 
             // dataartis
             // 
             this.dataartis.Name = "dataartis";
-            this.dataartis.Size = new System.Drawing.Size(270, 34);
+            this.dataartis.Size = new System.Drawing.Size(148, 22);
             this.dataartis.Text = "Data Artis";
             this.dataartis.Click += new System.EventHandler(this.dataArtisToolStripMenuItem_Click);
             // 
             // dataproduser
             // 
             this.dataproduser.Name = "dataproduser";
-            this.dataproduser.Size = new System.Drawing.Size(270, 34);
+            this.dataproduser.Size = new System.Drawing.Size(148, 22);
             this.dataproduser.Text = "Data Produser";
             this.dataproduser.Click += new System.EventHandler(this.dataProduserToolStripMenuItem_Click);
             // 
@@ -114,37 +114,39 @@
             this.toolStripDropDownButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton2.Image")));
             this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
-            this.toolStripDropDownButton2.Size = new System.Drawing.Size(107, 29);
+            this.toolStripDropDownButton2.Size = new System.Drawing.Size(71, 22);
             this.toolStripDropDownButton2.Text = "Data Baru";
+            this.toolStripDropDownButton2.Click += new System.EventHandler(this.toolStripDropDownButton2_Click);
             // 
             // dataLirikToolStripMenuItem
             // 
             this.dataLirikToolStripMenuItem.Name = "dataLirikToolStripMenuItem";
-            this.dataLirikToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.dataLirikToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.dataLirikToolStripMenuItem.Text = "Data Lirik ";
             this.dataLirikToolStripMenuItem.Click += new System.EventHandler(this.dataLirikToolStripMenuItem_Click);
             // 
             // dataDaftarPutarToolStripMenuItem
             // 
             this.dataDaftarPutarToolStripMenuItem.Name = "dataDaftarPutarToolStripMenuItem";
-            this.dataDaftarPutarToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.dataDaftarPutarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.dataDaftarPutarToolStripMenuItem.Text = "Data Daftar Putar";
             this.dataDaftarPutarToolStripMenuItem.Click += new System.EventHandler(this.dataDaftarPutarToolStripMenuItem_Click);
             // 
             // dataKontrakToolStripMenuItem
             // 
             this.dataKontrakToolStripMenuItem.Name = "dataKontrakToolStripMenuItem";
-            this.dataKontrakToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.dataKontrakToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.dataKontrakToolStripMenuItem.Text = "Data Kontrak";
             this.dataKontrakToolStripMenuItem.Click += new System.EventHandler(this.dataKontrakToolStripMenuItem_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(533, 292);
             this.Controls.Add(this.toolStrip1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "DATA MASTER";
             this.toolStrip1.ResumeLayout(false);

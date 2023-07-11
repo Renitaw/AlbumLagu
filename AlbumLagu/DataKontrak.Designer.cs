@@ -161,6 +161,7 @@
             this.btnadd.TabIndex = 13;
             this.btnadd.Text = "Add";
             this.btnadd.UseVisualStyleBackColor = true;
+            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
             // btnsave
             // 
@@ -171,6 +172,7 @@
             this.btnsave.TabIndex = 14;
             this.btnsave.Text = "Save";
             this.btnsave.UseVisualStyleBackColor = true;
+            this.btnsave.Click += new System.EventHandler(this.btnsave_Click);
             // 
             // btnclear
             // 
@@ -208,6 +210,7 @@
             this.btnopen.TabIndex = 18;
             this.btnopen.Text = "Open";
             this.btnopen.UseVisualStyleBackColor = true;
+            this.btnopen.Click += new System.EventHandler(this.btnopen_Click);
             // 
             // btnback
             // 
@@ -218,6 +221,7 @@
             this.btnback.TabIndex = 19;
             this.btnback.Text = "Back";
             this.btnback.UseVisualStyleBackColor = true;
+            this.btnback.Click += new System.EventHandler(this.btnback_Click);
             // 
             // DataKontrak
             // 
