@@ -42,6 +42,7 @@ namespace AlbumLagu
             cbxidproduser.Enabled = false;
             dtm.Enabled = false;
             dttb.Enabled = false;
+            txtnilaikontrak.Enabled = false;
             btnsave.Enabled = false;
             btnclear.Enabled = false;
             btnadd.Enabled = true;
@@ -51,6 +52,8 @@ namespace AlbumLagu
             this.cbxidartis.DataBindings.Clear();
             this.txtidkontrak.DataBindings.Clear();
             this.cbxidproduser.DataBindings.Clear();
+            this.dtm.DataBindings.Clear();
+            this.dttb.DataBindings.Clear();
             this.txtnilaikontrak.DataBindings.Clear();
         }
 
@@ -106,17 +109,22 @@ namespace AlbumLagu
             {
                 MessageBox.Show("Masukkan tanggal_berakhir", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            if (nilaikontrak == "")
+            {
+                MessageBox.Show("Masukkan nilai_kontrak", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             else
             {
                 koneksi.Open();
-                string str = "INSERT INTO lirik (id_lirik, judul, id_pencipta, nama_pencipta) VALUES (@id_lirik, @judul, @id_pencipta, @nama_pencipta)";
+                string str = "INSERT INTO kontrak (id_kontrak, id_artis, id_produser, tanggal_mulai, tanggal_berakhir) VALUES (@ID_kontrak, @ID_artis, @ID_produser, @tanggal_mulai, @tanggal_berakhir)";
                 SqlCommand cmd = new SqlCommand(str, koneksi);
                 cmd.CommandType = CommandType.Text;
-                cmd.Parameters.Add(new SqlParameter("@id_kontrak", idkontrak));
-                cmd.Parameters.Add(new SqlParameter("@id_artis", idartis));
-                cmd.Parameters.Add(new SqlParameter("@id_produser", idproduser));
+                cmd.Parameters.Add(new SqlParameter("@ID_kontrak", idkontrak));
+                cmd.Parameters.Add(new SqlParameter("@ID_artis", idartis));
+                cmd.Parameters.Add(new SqlParameter("@ID_produser", idproduser));
                 cmd.Parameters.Add(new SqlParameter("@tanggal_mulai", tanggalmulai));
                 cmd.Parameters.Add(new SqlParameter("@tanggal_berakhir", tanggalberakhir));
+                cmd.Parameters.Add(new SqlParameter("@nilai_kontrak", nilaikontrak));
                 cmd.ExecuteNonQuery();
 
                 koneksi.Close();

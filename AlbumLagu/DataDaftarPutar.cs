@@ -13,8 +13,9 @@ namespace AlbumLagu
 {
     public partial class DataDaftarPutar : Form
     {
-        private string stringConnection = "data source=RENITAWIDIASTUT\\RENITAWDST;database=ACT6;User ID=sa; Password=Rere2607";
+        private string stringConnection = "data source=RENITAWIDIASTUT\\RENITAWDST;database=ALBUMLAGUUAS;User ID=sa; Password=Rere2607";
         private SqlConnection koneksi;
+        BindingSource customerBindingSource = new BindingSource();
         public DataDaftarPutar()
         {
             InitializeComponent();
@@ -33,12 +34,31 @@ namespace AlbumLagu
             btnadd.Enabled = true;
 
         }
-
-        private void datagridview1()
+        private void FormDataDaftarPutar_Load()
         {
             koneksi.Open();
-            string str = "select * from dbo.daftar_putar";
-            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            SqlDataAdapter dataAdapter1 = new SqlDataAdapter(new SqlCommand("Select d.id_daftar_putar, d.nama_daftar, d.id_pengguna, d.id_lagu, l.id_lagu FROM dbo.daftar_putar d JOIN dbo.lagu p ON d.id_lagu = l.id_lagu", koneksi));
+            DataSet ds = new DataSet();
+            dataAdapter1.Fill(ds);
+
+            this.customerBindingSource.DataSource = ds.Tables[0];
+            this.txtiddaftarputar.DataBindings.Add(
+                new Binding("Text", this.customerBindingSource, "iddaftarputar", true));
+            this.txtnamadaftar.DataBindings.Add(
+                new Binding("Text", this.customerBindingSource, "nama_daftar", true));
+            this.txtidpengguna.DataBindings.Add(
+                new Binding("Text", this.customerBindingSource, "alamat", true));
+            this.cbxidlagu.DataBindings.Add(
+                new Binding("Text", this.customerBindingSource, "id_lagu", true));
+
+            koneksi.Close();
+        }
+
+        private void dataGridView()
+        {
+            koneksi.Open();
+            string query = "SELECT id_daftar_putar, nama_daftar, id_pengguna, id_lagu FROM dbo.daftar_putar";
+            SqlDataAdapter da = new SqlDataAdapter(query, koneksi);
             DataSet ds = new DataSet();
             da.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0];
@@ -57,7 +77,7 @@ namespace AlbumLagu
 
         private void btnopen_Click(object sender, EventArgs e)
         {
-            datagridview1();
+            dataGridView();
             btnopen.Enabled = false;
         }
 
@@ -67,9 +87,8 @@ namespace AlbumLagu
             txtnamadaftar.Enabled = true;
             txtidpengguna.Enabled = true;
             cbxidlagu.Enabled = true;
-            btnclear.Enabled = true;
             btnsave.Enabled = true;
-            btnadd.Enabled = false;
+            btnclear.Enabled = false;
         }
 
         private void btnsave_Click(object sender, EventArgs e)
@@ -77,28 +96,27 @@ namespace AlbumLagu
             string iddaftarputar = txtiddaftarputar.Text;
             string namadaftar = txtnamadaftar.Text;
             string idpengguna = txtidpengguna.Text;
-            string idlagu = cbxidlagu.Text;
-
+            string idlagu = cbxidlagu.ValueMember;
             if (iddaftarputar == "")
             {
-                MessageBox.Show("Masukkan iddaftarputar", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Masukkan id daftar putar", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             if (namadaftar == "")
             {
-                MessageBox.Show("Masukkan namadaftar", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Masukkan nama daftar", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             if (idpengguna == "")
             {
-                MessageBox.Show("Masukkan idpengguna", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Masukkan id pengguna", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             if (idlagu == "")
             {
-                MessageBox.Show("Masukkan idlagu", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Masukkan id lagu", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
                 koneksi.Open();
-                string str = "INSERT INTO daftar_putar (id_daftar_putar, nama_daftar, id_pengguna, id_lagu) VALUES (@id_daftar_putar, @nama_daftar, @id_pengguna, @id_lagu";
+                string str = "INSERT INTO daftar_putar (id_daftar_putar, nama_daftar, id_pengguna, id_lagu) VALUES (@id_daftar_putar, @nama_daftar, @id_pengguna, @id_lagu)";
                 SqlCommand cmd = new SqlCommand(str, koneksi);
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.Add(new SqlParameter("@id_daftar_putar", iddaftarputar));
@@ -106,12 +124,18 @@ namespace AlbumLagu
                 cmd.Parameters.Add(new SqlParameter("@id_pengguna", idpengguna));
                 cmd.Parameters.Add(new SqlParameter("@id_lagu", idlagu));
                 cmd.ExecuteNonQuery();
-
                 koneksi.Close();
                 MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                datagridview1();
+                dataGridView();
                 refreshform();
             }
+        }
+
+        private void btnback_Click(object sender, EventArgs e)
+        {
+                        Form1 f1 = new Form1();
+            f1.Show();
+            this.Hide();
         }
     }
 }
