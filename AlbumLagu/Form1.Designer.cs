@@ -73,35 +73,35 @@
             // datapencipta
             // 
             this.datapencipta.Name = "datapencipta";
-            this.datapencipta.Size = new System.Drawing.Size(270, 34);
+            this.datapencipta.Size = new System.Drawing.Size(227, 34);
             this.datapencipta.Text = "Data Pencipta";
             this.datapencipta.Click += new System.EventHandler(this.dataUtamaToolStripMenuItem_Click);
             // 
             // datalagu
             // 
             this.datalagu.Name = "datalagu";
-            this.datalagu.Size = new System.Drawing.Size(270, 34);
+            this.datalagu.Size = new System.Drawing.Size(227, 34);
             this.datalagu.Text = "Data Lagu";
             this.datalagu.Click += new System.EventHandler(this.dataPenciptaToolStripMenuItem_Click);
             // 
             // dataalbum
             // 
             this.dataalbum.Name = "dataalbum";
-            this.dataalbum.Size = new System.Drawing.Size(270, 34);
+            this.dataalbum.Size = new System.Drawing.Size(227, 34);
             this.dataalbum.Text = "Data Album";
             this.dataalbum.Click += new System.EventHandler(this.dataLaguToolStripMenuItem_Click);
             // 
             // dataartis
             // 
             this.dataartis.Name = "dataartis";
-            this.dataartis.Size = new System.Drawing.Size(270, 34);
+            this.dataartis.Size = new System.Drawing.Size(227, 34);
             this.dataartis.Text = "Data Artis";
             this.dataartis.Click += new System.EventHandler(this.dataArtisToolStripMenuItem_Click);
             // 
             // dataproduser
             // 
             this.dataproduser.Name = "dataproduser";
-            this.dataproduser.Size = new System.Drawing.Size(270, 34);
+            this.dataproduser.Size = new System.Drawing.Size(227, 34);
             this.dataproduser.Text = "Data Produser";
             this.dataproduser.Click += new System.EventHandler(this.dataProduserToolStripMenuItem_Click);
             // 
@@ -122,21 +122,21 @@
             // dataLirikToolStripMenuItem
             // 
             this.dataLirikToolStripMenuItem.Name = "dataLirikToolStripMenuItem";
-            this.dataLirikToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.dataLirikToolStripMenuItem.Size = new System.Drawing.Size(251, 34);
             this.dataLirikToolStripMenuItem.Text = "Data Lirik ";
             this.dataLirikToolStripMenuItem.Click += new System.EventHandler(this.dataLirikToolStripMenuItem_Click);
             // 
             // dataDaftarPutarToolStripMenuItem
             // 
             this.dataDaftarPutarToolStripMenuItem.Name = "dataDaftarPutarToolStripMenuItem";
-            this.dataDaftarPutarToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.dataDaftarPutarToolStripMenuItem.Size = new System.Drawing.Size(251, 34);
             this.dataDaftarPutarToolStripMenuItem.Text = "Data Daftar Putar";
             this.dataDaftarPutarToolStripMenuItem.Click += new System.EventHandler(this.dataDaftarPutarToolStripMenuItem_Click);
             // 
             // dataKontrakToolStripMenuItem
             // 
             this.dataKontrakToolStripMenuItem.Name = "dataKontrakToolStripMenuItem";
-            this.dataKontrakToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.dataKontrakToolStripMenuItem.Size = new System.Drawing.Size(251, 34);
             this.dataKontrakToolStripMenuItem.Text = "Data Kontrak";
             this.dataKontrakToolStripMenuItem.Click += new System.EventHandler(this.dataKontrakToolStripMenuItem_Click);
             // 
@@ -145,11 +145,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SandyBrown;
+            this.BackgroundImage = global::AlbumLagu.Properties.Resources.FORM3;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 449);
             this.Controls.Add(this.toolStrip1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "Form1";
             this.Text = "DATA MASTER";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
