@@ -93,6 +93,8 @@ namespace AlbumLagu
 
         private void DataAlbum_Load()
         {
+            // TODO: This line of code loads data into the 'aLBUMLAGUUASDataSet.album' table. You can move, or remove it, as needed.
+            this.albumTableAdapter.Fill(this.aLBUMLAGUUASDataSet.album);
             koneksi.Open();
             SqlDataAdapter dataAdapter1 = new SqlDataAdapter(new SqlCommand("Select id_album, nama_album, id_artis, id_lagu, perusahaan, tahun_rilis, genre from dbo.album", koneksi));
             DataSet ds = new DataSet();
@@ -142,8 +144,36 @@ namespace AlbumLagu
             btnclear.Enabled = false;
             clearBinding();
             DataAlbum_Load();
+            idartiscbx();
+            idlagucbx();
+        }
 
+        private void idartiscbx()
+        {
+            koneksi.Open();
+            string str = "select id_artis from dbo.artis";
+            SqlCommand cmd = new SqlCommand(str, koneksi);
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            cmd.ExecuteReader();
+            koneksi.Close();
+            cbxidartis.DisplayMember = "id_artis";
+            cbxidartis.DataSource = ds.Tables[0];
+        }
 
+        private void idlagucbx()
+        {
+            koneksi.Open();
+            string str = "select id_lagu from dbo.lagu";
+            SqlCommand cmd = new SqlCommand(str, koneksi);
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            cmd.ExecuteReader();
+            koneksi.Close();
+            cbxidlagu.DisplayMember = "id_lagu";
+            cbxidlagu.DataSource = ds.Tables[0];
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)

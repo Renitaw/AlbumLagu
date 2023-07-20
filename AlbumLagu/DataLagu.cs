@@ -115,6 +115,8 @@ namespace AlbumLagu
             btnsave.Enabled = true;
             btnclear.Enabled = true;
             btnadd.Enabled = false;
+            idartiscbx();
+            idprodusercbx();
         }
 
         private void btnsave_Click(object sender, EventArgs e)
@@ -168,6 +170,34 @@ namespace AlbumLagu
             clearBinding();
             DataLagu_Load();
 
+        }
+
+        private void idartiscbx()
+        {
+            koneksi.Open();
+            string str = "select id_artis from dbo.artis";
+            SqlCommand cmd = new SqlCommand(str, koneksi);
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            cmd.ExecuteReader();
+            koneksi.Close();
+            cbxidartis.DisplayMember = "id_artis";
+            cbxidartis.DataSource = ds.Tables[0];
+        }
+
+        private void idprodusercbx()
+        {
+            koneksi.Open();
+            string str = "select id_produser from dbo.produser";
+            SqlCommand cmd = new SqlCommand(str, koneksi);
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            cmd.ExecuteReader();
+            koneksi.Close();
+            cbxidproduser.DisplayMember = "id_produser";
+            cbxidproduser.DataSource = ds.Tables[0];
         }
     }
 }

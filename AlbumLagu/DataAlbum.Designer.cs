@@ -62,15 +62,21 @@
             this.btnback = new System.Windows.Forms.Button();
             this.cbxidartis = new System.Windows.Forms.ComboBox();
             this.cbxidlagu = new System.Windows.Forms.ComboBox();
+            this.aLBUMLAGUUASDataSet = new AlbumLagu.ALBUMLAGUUASDataSet();
+            this.albumBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.albumTableAdapter = new AlbumLagu.ALBUMLAGUUASDataSetTableAdapters.albumTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.aLBUMLAGUUASDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.albumBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // bindingNavigator1
             // 
             this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
             this.bindingNavigator1.BackColor = System.Drawing.Color.Bisque;
+            this.bindingNavigator1.BindingSource = this.albumBindingSource;
             this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
             this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem;
             this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(24, 24);
@@ -300,6 +306,7 @@
             this.txtidalbum.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtidalbum.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.albumBindingSource, "id_album", true));
             this.txtidalbum.Location = new System.Drawing.Point(358, 4);
             this.txtidalbum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtidalbum.Name = "txtidalbum";
@@ -428,6 +435,20 @@
             this.cbxidlagu.Size = new System.Drawing.Size(349, 33);
             this.cbxidlagu.TabIndex = 15;
             // 
+            // aLBUMLAGUUASDataSet
+            // 
+            this.aLBUMLAGUUASDataSet.DataSetName = "ALBUMLAGUUASDataSet";
+            this.aLBUMLAGUUASDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // albumBindingSource
+            // 
+            this.albumBindingSource.DataMember = "album";
+            this.albumBindingSource.DataSource = this.aLBUMLAGUUASDataSet;
+            // 
+            // albumTableAdapter
+            // 
+            this.albumTableAdapter.ClearBeforeFill = true;
+            // 
             // DataAlbum
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -451,6 +472,8 @@
             this.bindingNavigator1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.aLBUMLAGUUASDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.albumBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -490,5 +513,8 @@
         private System.Windows.Forms.Button btnback;
         private System.Windows.Forms.ComboBox cbxidartis;
         private System.Windows.Forms.ComboBox cbxidlagu;
+        private ALBUMLAGUUASDataSet aLBUMLAGUUASDataSet;
+        private System.Windows.Forms.BindingSource albumBindingSource;
+        private ALBUMLAGUUASDataSetTableAdapters.albumTableAdapter albumTableAdapter;
     }
 }
