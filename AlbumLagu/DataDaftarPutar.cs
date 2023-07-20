@@ -253,5 +253,10 @@ namespace AlbumLagu
                 }
             }
         }
+
+        private void cbxidlagu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

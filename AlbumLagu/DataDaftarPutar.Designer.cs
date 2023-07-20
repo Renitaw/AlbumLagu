@@ -51,20 +51,22 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Info;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(203, 30);
+            this.dataGridView1.Location = new System.Drawing.Point(271, 38);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(383, 195);
+            this.dataGridView1.Size = new System.Drawing.Size(511, 244);
             this.dataGridView1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Linen;
-            this.label1.Location = new System.Drawing.Point(199, 249);
+            this.label1.Location = new System.Drawing.Point(265, 311);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 20);
+            this.label1.Size = new System.Drawing.Size(137, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "ID Daftar putar";
             // 
@@ -72,9 +74,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Linen;
-            this.label2.Location = new System.Drawing.Point(199, 285);
+            this.label2.Location = new System.Drawing.Point(265, 356);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 20);
+            this.label2.Size = new System.Drawing.Size(121, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "Nama Daftar";
             // 
@@ -82,9 +85,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Linen;
-            this.label3.Location = new System.Drawing.Point(199, 321);
+            this.label3.Location = new System.Drawing.Point(265, 401);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 20);
+            this.label3.Size = new System.Drawing.Size(126, 25);
             this.label3.TabIndex = 3;
             this.label3.Text = "ID Pengguna";
             // 
@@ -92,39 +96,44 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Linen;
-            this.label4.Location = new System.Drawing.Point(199, 354);
+            this.label4.Location = new System.Drawing.Point(265, 442);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 20);
+            this.label4.Size = new System.Drawing.Size(80, 25);
             this.label4.TabIndex = 4;
             this.label4.Text = "ID Lagu";
             // 
             // txtiddaftarputar
             // 
-            this.txtiddaftarputar.Location = new System.Drawing.Point(321, 249);
+            this.txtiddaftarputar.Location = new System.Drawing.Point(428, 311);
+            this.txtiddaftarputar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtiddaftarputar.Name = "txtiddaftarputar";
-            this.txtiddaftarputar.Size = new System.Drawing.Size(265, 26);
+            this.txtiddaftarputar.Size = new System.Drawing.Size(352, 30);
             this.txtiddaftarputar.TabIndex = 5;
             // 
             // txtnamadaftar
             // 
-            this.txtnamadaftar.Location = new System.Drawing.Point(321, 282);
+            this.txtnamadaftar.Location = new System.Drawing.Point(428, 352);
+            this.txtnamadaftar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtnamadaftar.Name = "txtnamadaftar";
-            this.txtnamadaftar.Size = new System.Drawing.Size(265, 26);
+            this.txtnamadaftar.Size = new System.Drawing.Size(352, 30);
             this.txtnamadaftar.TabIndex = 6;
             // 
             // txtidpengguna
             // 
-            this.txtidpengguna.Location = new System.Drawing.Point(321, 315);
+            this.txtidpengguna.Location = new System.Drawing.Point(428, 394);
+            this.txtidpengguna.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtidpengguna.Name = "txtidpengguna";
-            this.txtidpengguna.Size = new System.Drawing.Size(265, 26);
+            this.txtidpengguna.Size = new System.Drawing.Size(352, 30);
             this.txtidpengguna.TabIndex = 7;
             // 
             // btnadd
             // 
             this.btnadd.BackColor = System.Drawing.Color.Linen;
-            this.btnadd.Location = new System.Drawing.Point(203, 406);
+            this.btnadd.Location = new System.Drawing.Point(271, 508);
+            this.btnadd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnadd.Name = "btnadd";
-            this.btnadd.Size = new System.Drawing.Size(75, 32);
+            this.btnadd.Size = new System.Drawing.Size(100, 40);
             this.btnadd.TabIndex = 9;
             this.btnadd.Text = "Add";
             this.btnadd.UseVisualStyleBackColor = false;
@@ -133,9 +142,10 @@
             // btnsave
             // 
             this.btnsave.BackColor = System.Drawing.Color.Linen;
-            this.btnsave.Location = new System.Drawing.Point(357, 406);
+            this.btnsave.Location = new System.Drawing.Point(476, 508);
+            this.btnsave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnsave.Name = "btnsave";
-            this.btnsave.Size = new System.Drawing.Size(75, 32);
+            this.btnsave.Size = new System.Drawing.Size(100, 40);
             this.btnsave.TabIndex = 10;
             this.btnsave.Text = "Save";
             this.btnsave.UseVisualStyleBackColor = false;
@@ -144,9 +154,10 @@
             // btnclear
             // 
             this.btnclear.BackColor = System.Drawing.Color.Linen;
-            this.btnclear.Location = new System.Drawing.Point(510, 406);
+            this.btnclear.Location = new System.Drawing.Point(680, 508);
+            this.btnclear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnclear.Name = "btnclear";
-            this.btnclear.Size = new System.Drawing.Size(75, 32);
+            this.btnclear.Size = new System.Drawing.Size(100, 40);
             this.btnclear.TabIndex = 11;
             this.btnclear.Text = "Clear";
             this.btnclear.UseVisualStyleBackColor = false;
@@ -155,9 +166,10 @@
             // btnopen
             // 
             this.btnopen.BackColor = System.Drawing.Color.Linen;
-            this.btnopen.Location = new System.Drawing.Point(604, 30);
+            this.btnopen.Location = new System.Drawing.Point(805, 38);
+            this.btnopen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnopen.Name = "btnopen";
-            this.btnopen.Size = new System.Drawing.Size(75, 27);
+            this.btnopen.Size = new System.Drawing.Size(100, 34);
             this.btnopen.TabIndex = 12;
             this.btnopen.Text = "Open";
             this.btnopen.UseVisualStyleBackColor = false;
@@ -166,9 +178,10 @@
             // btnback
             // 
             this.btnback.BackColor = System.Drawing.Color.Linen;
-            this.btnback.Location = new System.Drawing.Point(108, 30);
+            this.btnback.Location = new System.Drawing.Point(144, 38);
+            this.btnback.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnback.Name = "btnback";
-            this.btnback.Size = new System.Drawing.Size(75, 27);
+            this.btnback.Size = new System.Drawing.Size(100, 34);
             this.btnback.TabIndex = 13;
             this.btnback.Text = "Back";
             this.btnback.UseVisualStyleBackColor = false;
@@ -177,17 +190,20 @@
             // cbxidlagu
             // 
             this.cbxidlagu.FormattingEnabled = true;
-            this.cbxidlagu.Location = new System.Drawing.Point(321, 354);
+            this.cbxidlagu.Location = new System.Drawing.Point(428, 442);
+            this.cbxidlagu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbxidlagu.Name = "cbxidlagu";
-            this.cbxidlagu.Size = new System.Drawing.Size(265, 28);
+            this.cbxidlagu.Size = new System.Drawing.Size(352, 33);
             this.cbxidlagu.TabIndex = 14;
+            this.cbxidlagu.SelectedIndexChanged += new System.EventHandler(this.cbxidlagu_SelectedIndexChanged);
             // 
             // btnupdt
             // 
             this.btnupdt.BackColor = System.Drawing.Color.Linen;
-            this.btnupdt.Location = new System.Drawing.Point(604, 78);
+            this.btnupdt.Location = new System.Drawing.Point(805, 98);
+            this.btnupdt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnupdt.Name = "btnupdt";
-            this.btnupdt.Size = new System.Drawing.Size(75, 33);
+            this.btnupdt.Size = new System.Drawing.Size(100, 41);
             this.btnupdt.TabIndex = 15;
             this.btnupdt.Text = "Update";
             this.btnupdt.UseVisualStyleBackColor = false;
@@ -196,9 +212,10 @@
             // btndlt
             // 
             this.btndlt.BackColor = System.Drawing.Color.Linen;
-            this.btndlt.Location = new System.Drawing.Point(604, 127);
+            this.btndlt.Location = new System.Drawing.Point(805, 159);
+            this.btndlt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btndlt.Name = "btndlt";
-            this.btndlt.Size = new System.Drawing.Size(75, 31);
+            this.btndlt.Size = new System.Drawing.Size(100, 39);
             this.btndlt.TabIndex = 16;
             this.btndlt.Text = "Delete";
             this.btndlt.UseVisualStyleBackColor = false;
@@ -206,10 +223,10 @@
             // 
             // DataDaftarPutar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Peru;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1178, 744);
             this.Controls.Add(this.btndlt);
             this.Controls.Add(this.btnupdt);
             this.Controls.Add(this.cbxidlagu);
@@ -226,6 +243,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "DataDaftarPutar";
             this.Text = "Data Daftar Putar";
             this.Load += new System.EventHandler(this.DataDaftarPutar_Load);

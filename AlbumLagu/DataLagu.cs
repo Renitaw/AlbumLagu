@@ -28,23 +28,22 @@ namespace AlbumLagu
         private void DataLagu_Load()
         {
             koneksi.Open();
-            SqlDataAdapter dataAdapter1 = new SqlDataAdapter(new SqlCommand("Select id_lagu, id_artis, id_produser, judul, durasi, genre from dbo.lagu", koneksi));
-            DataSet ds = new DataSet();
-            dataAdapter1.Fill(ds);
 
-            this.customerBindingSource.DataSource = ds.Tables[0];
-            this.txtidlagu.DataBindings.Add(
-                new Binding("Text", this.customerBindingSource, "id_lagu", true));
-            this.txtidartis.DataBindings.Add(
-                new Binding("Text", this.customerBindingSource, "id_artis", true));
-            this.txtidproduser.DataBindings.Add(
-                new Binding("Text", this.customerBindingSource, "id_produser", true));
-            this.txtjudul.DataBindings.Add(
-                new Binding("Text", this.customerBindingSource, "judul", true));
-            this.txtdurasi.DataBindings.Add(
-                new Binding("Text", this.customerBindingSource, "durasi", true));
-            this.txtgenre.DataBindings.Add(
-                new Binding("Text", this.customerBindingSource, "genre", true));
+
+            SqlDataAdapter artisDataAdapter = new SqlDataAdapter(new SqlCommand("SELECT id_artis, nama_artis FROM dbo.artis", koneksi));
+            DataTable artisDataTable = new DataTable();
+            artisDataAdapter.Fill(artisDataTable);
+            cbxidartis.DataSource = artisDataTable;
+            cbxidartis.DisplayMember = "nama_artis";
+            cbxidartis.ValueMember = "id_artis";
+
+            SqlDataAdapter produserDataAdapter = new SqlDataAdapter(new SqlCommand("SELECT id_produser, nama_produser FROM dbo.produser", koneksi));
+            DataTable produserDataTable = new DataTable();
+            produserDataAdapter.Fill(produserDataTable);
+            cbxidproduser.DataSource = produserDataTable;
+            cbxidproduser.DisplayMember = "nama_produser";
+            cbxidproduser.ValueMember = "id_produser";
+
             koneksi.Close();
 
         }
@@ -61,11 +60,21 @@ namespace AlbumLagu
             this.Hide();
         }
 
+        private void txtidartis_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbxidproduser_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void clearBinding()
         {
             this.txtidlagu.DataBindings.Clear();
-            this.txtidartis.DataBindings.Clear();
-            this.txtidproduser.DataBindings.Clear();
+            this.cbxidartis.DataBindings.Clear();
+            this.cbxidproduser.DataBindings.Clear();
             this.txtjudul.DataBindings.Clear();
             this.txtdurasi.DataBindings.Clear();
             this.txtgenre.DataBindings.Clear();
@@ -80,14 +89,14 @@ namespace AlbumLagu
         private void btnadd_Click(object sender, EventArgs e)
         {
             txtidlagu.Text = "";
-            txtidartis.Text = "";
-            txtidproduser.Text = "";
+            cbxidartis.Text = "";
+            cbxidproduser.Text = "";
             txtjudul.Text = "";
             txtdurasi.Text = "";
             txtgenre.Text = "";
             txtidlagu.Enabled = true;
-            txtidartis.Enabled = true;
-            txtidproduser.Enabled = true;
+            cbxidartis.Enabled = true;
+            cbxidproduser.Enabled = true;
             txtjudul.Enabled = true;
             txtdurasi.Enabled = true;
             txtgenre.Enabled = true;
@@ -99,35 +108,18 @@ namespace AlbumLagu
         private void btnsave_Click(object sender, EventArgs e)
         {
             idlagu = txtidlagu.Text;
-            idartis = txtidartis.Text;
-            idproduser = txtidproduser.Text;
+            idartis = cbxidartis.SelectedValue.ToString();
+            idproduser = cbxidproduser.SelectedValue.ToString();
             judul = txtjudul.Text;
             durasi = txtdurasi.Text;
             genre = txtgenre.Text;
-            koneksi.Open();
-            string str = "INSERT INTO dbo.lagu (id_lagu, judul, durasi, genre) " +
-                "VALUES (@IDlagu, @jdl, @drs, @gnr)";
-            SqlCommand cmd = new SqlCommand(str, koneksi);
-            cmd.CommandType = CommandType.Text;
-            cmd.Parameters.Add(new SqlParameter("@IDlagu", idlagu));
-            cmd.Parameters.Add(new SqlParameter("@IDartis", idartis));
-            cmd.Parameters.Add(new SqlParameter("@IDproduser", idproduser));
-            cmd.Parameters.Add(new SqlParameter("@jdl", judul));
-            cmd.Parameters.Add(new SqlParameter("@drs", TimeSpan.Parse(durasi))); 
-            cmd.Parameters.Add(new SqlParameter("@gnr", genre));
-            cmd.ExecuteNonQuery();
-            koneksi.Close();
-
-            MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            refreshform();
         }
 
         private void refreshform()
         {
             txtidlagu.Enabled = false;
-            txtidartis.Enabled = false;
-            txtidproduser.Enabled = false;
+            cbxidartis.Enabled = false;
+            cbxidproduser.Enabled = false;
             txtjudul.Enabled = false;
             txtdurasi.Enabled = false;
             txtgenre.Enabled = false;
