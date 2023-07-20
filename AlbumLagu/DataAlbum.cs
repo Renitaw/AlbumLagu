@@ -27,8 +27,8 @@ namespace AlbumLagu
         {
             idalbum = txtidalbum.Text;
             namaalbum = txtnamaalbum.Text;
-            idartis = txtidartis.Text;
-            idlagu = txtidlagu.Text;
+            idartis = cbxidartis.Text;
+            idlagu = cbxidlagu.Text;
             perusahaan = txtperusahaan.Text;
             tahunrilis = txttahunrilis.Text;
             genre = txtgenre.Text;
@@ -54,15 +54,15 @@ namespace AlbumLagu
         {
             txtidalbum.Text = "";
             txtnamaalbum.Text = "";
-            txtidartis.Text = "";
-            txtidlagu.Text = "";
+            cbxidartis.Text = "";
+            cbxidlagu.Text = "";
             txtperusahaan.Text = "";
             txttahunrilis.Text = "";
             txtgenre.Text = "";
             txtidalbum.Enabled = true;
             txtnamaalbum.Enabled = true;
-            txtidartis.Enabled = true;
-            txtidlagu.Enabled = true;
+            cbxidartis.Enabled = true;
+            cbxidlagu.Enabled = true;
             txtperusahaan.Enabled = true;
             txttahunrilis.Enabled = true;
             txtgenre.Enabled = true;
@@ -76,6 +76,11 @@ namespace AlbumLagu
             Form1 frm = new Form1();
             frm.Show();
             this.Hide();
+        }
+
+        private void cbxidartis_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
         public DataAlbum()
@@ -98,9 +103,9 @@ namespace AlbumLagu
                 new Binding("Text", this.customerBindingSource, "id_album", true));
             this.txtnamaalbum.DataBindings.Add(
                 new Binding("Text", this.customerBindingSource, "id_album", true));
-            this.txtidartis.DataBindings.Add(
+            this.cbxidartis.DataBindings.Add(
                 new Binding("Text", this.customerBindingSource, "id_artis", true));
-            this.txtidlagu.DataBindings.Add(
+            this.cbxidlagu.DataBindings.Add(
                 new Binding("Text", this.customerBindingSource, "id_lagu", true));
             this.txtperusahaan.DataBindings.Add(
                 new Binding("Text", this.customerBindingSource, "perusahaan", true));
@@ -116,8 +121,8 @@ namespace AlbumLagu
         {
             this.txtidalbum.DataBindings.Clear();
             this.txtnamaalbum.DataBindings.Clear();
-            this.txtidartis.DataBindings.Clear();
-            this.txtidlagu.DataBindings.Clear();
+            this.cbxidartis.DataBindings.Clear();
+            this.cbxidlagu.DataBindings.Clear();
             this.txtperusahaan.DataBindings.Clear();
             this.txttahunrilis.DataBindings.Clear();
             this.txtgenre.DataBindings.Clear();
@@ -128,8 +133,8 @@ namespace AlbumLagu
         {
             txtidalbum.Enabled = false;
             txtnamaalbum.Enabled = false;
-            txtidartis.Enabled = false;
-            txtidlagu.Enabled = false;
+            cbxidartis.Enabled = false;
+            cbxidlagu.Enabled = false;
             txtperusahaan.Enabled = false;
             txttahunrilis.Enabled = false;
             txtgenre.Enabled = false;

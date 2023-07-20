@@ -52,8 +52,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtidalbum = new System.Windows.Forms.TextBox();
             this.txtnamaalbum = new System.Windows.Forms.TextBox();
-            this.txtidartis = new System.Windows.Forms.TextBox();
-            this.txtidlagu = new System.Windows.Forms.TextBox();
             this.txtperusahaan = new System.Windows.Forms.TextBox();
             this.txttahunrilis = new System.Windows.Forms.TextBox();
             this.txtgenre = new System.Windows.Forms.TextBox();
@@ -62,6 +60,8 @@
             this.btnclear = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.btnback = new System.Windows.Forms.Button();
+            this.cbxidartis = new System.Windows.Forms.ComboBox();
+            this.cbxidlagu = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -198,11 +198,11 @@
             this.tableLayoutPanel1.Controls.Add(this.label7, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.txtidalbum, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtnamaalbum, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.txtidartis, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.txtidlagu, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.txtperusahaan, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.txttahunrilis, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.txtgenre, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.cbxidartis, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.cbxidlagu, 1, 3);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(192, 101);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -317,28 +317,6 @@
             this.txtnamaalbum.Size = new System.Drawing.Size(347, 30);
             this.txtnamaalbum.TabIndex = 8;
             // 
-            // txtidartis
-            // 
-            this.txtidartis.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtidartis.Location = new System.Drawing.Point(358, 105);
-            this.txtidartis.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtidartis.Name = "txtidartis";
-            this.txtidartis.Size = new System.Drawing.Size(347, 30);
-            this.txtidartis.TabIndex = 9;
-            // 
-            // txtidlagu
-            // 
-            this.txtidlagu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtidlagu.Location = new System.Drawing.Point(358, 157);
-            this.txtidlagu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtidlagu.Name = "txtidlagu";
-            this.txtidlagu.Size = new System.Drawing.Size(347, 30);
-            this.txtidlagu.TabIndex = 10;
-            // 
             // txtperusahaan
             // 
             this.txtperusahaan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -433,6 +411,23 @@
             this.btnback.UseVisualStyleBackColor = false;
             this.btnback.Click += new System.EventHandler(this.btnback_Click);
             // 
+            // cbxidartis
+            // 
+            this.cbxidartis.FormattingEnabled = true;
+            this.cbxidartis.Location = new System.Drawing.Point(357, 104);
+            this.cbxidartis.Name = "cbxidartis";
+            this.cbxidartis.Size = new System.Drawing.Size(349, 33);
+            this.cbxidartis.TabIndex = 14;
+            this.cbxidartis.SelectedIndexChanged += new System.EventHandler(this.cbxidartis_SelectedIndexChanged);
+            // 
+            // cbxidlagu
+            // 
+            this.cbxidlagu.FormattingEnabled = true;
+            this.cbxidlagu.Location = new System.Drawing.Point(357, 156);
+            this.cbxidlagu.Name = "cbxidlagu";
+            this.cbxidlagu.Size = new System.Drawing.Size(349, 33);
+            this.cbxidlagu.TabIndex = 15;
+            // 
             // DataAlbum
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -485,8 +480,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtidalbum;
         private System.Windows.Forms.TextBox txtnamaalbum;
-        private System.Windows.Forms.TextBox txtidartis;
-        private System.Windows.Forms.TextBox txtidlagu;
         private System.Windows.Forms.TextBox txtperusahaan;
         private System.Windows.Forms.TextBox txttahunrilis;
         private System.Windows.Forms.TextBox txtgenre;
@@ -495,5 +488,7 @@
         private System.Windows.Forms.Button btnclear;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnback;
+        private System.Windows.Forms.ComboBox cbxidartis;
+        private System.Windows.Forms.ComboBox cbxidlagu;
     }
 }

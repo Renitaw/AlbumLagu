@@ -104,6 +104,11 @@ namespace AlbumLagu
 
         }
 
+        private void bindingNavigator1_RefreshItems(object sender, EventArgs e)
+        {
+
+        }
+
         private void DataPencipta_Load(object sender, EventArgs e)
         {
 

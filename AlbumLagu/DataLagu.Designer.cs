@@ -60,15 +60,21 @@
             this.btnback = new System.Windows.Forms.Button();
             this.cbxidartis = new System.Windows.Forms.ComboBox();
             this.cbxidproduser = new System.Windows.Forms.ComboBox();
+            this.aLBUMLAGUUASDataSet = new AlbumLagu.ALBUMLAGUUASDataSet();
+            this.laguBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.laguTableAdapter = new AlbumLagu.ALBUMLAGUUASDataSetTableAdapters.laguTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.aLBUMLAGUUASDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.laguBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // bindingNavigator1
             // 
             this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
             this.bindingNavigator1.BackColor = System.Drawing.Color.Peru;
+            this.bindingNavigator1.BindingSource = this.laguBindingSource;
             this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
             this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem;
             this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(24, 24);
@@ -94,6 +100,7 @@
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
             this.bindingNavigator1.Size = new System.Drawing.Size(1178, 33);
             this.bindingNavigator1.TabIndex = 0;
+            this.bindingNavigator1.RefreshItems += new System.EventHandler(this.bindingNavigator1_RefreshItems);
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -281,6 +288,7 @@
             // txtidlagu
             // 
             this.txtidlagu.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtidlagu.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.laguBindingSource, "id_lagu", true));
             this.txtidlagu.Location = new System.Drawing.Point(344, 10);
             this.txtidlagu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtidlagu.Name = "txtidlagu";
@@ -394,6 +402,20 @@
             this.cbxidproduser.TabIndex = 13;
             this.cbxidproduser.SelectedIndexChanged += new System.EventHandler(this.cbxidproduser_SelectedIndexChanged);
             // 
+            // aLBUMLAGUUASDataSet
+            // 
+            this.aLBUMLAGUUASDataSet.DataSetName = "ALBUMLAGUUASDataSet";
+            this.aLBUMLAGUUASDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // laguBindingSource
+            // 
+            this.laguBindingSource.DataMember = "lagu";
+            this.laguBindingSource.DataSource = this.aLBUMLAGUUASDataSet;
+            // 
+            // laguTableAdapter
+            // 
+            this.laguTableAdapter.ClearBeforeFill = true;
+            // 
             // DataLagu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -417,6 +439,8 @@
             this.bindingNavigator1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.aLBUMLAGUUASDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.laguBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -454,5 +478,8 @@
         private System.Windows.Forms.Button btnback;
         private System.Windows.Forms.ComboBox cbxidartis;
         private System.Windows.Forms.ComboBox cbxidproduser;
+        private ALBUMLAGUUASDataSet aLBUMLAGUUASDataSet;
+        private System.Windows.Forms.BindingSource laguBindingSource;
+        private ALBUMLAGUUASDataSetTableAdapters.laguTableAdapter laguTableAdapter;
     }
 }

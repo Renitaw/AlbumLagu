@@ -23,26 +23,33 @@ namespace AlbumLagu
             koneksi = new SqlConnection(stringConnection);
             this.bindingNavigator1.BindingSource = this.customerBindingSource;
             refreshform();
+
         }
 
         private void DataLagu_Load()
         {
+           
+            this.laguTableAdapter.Fill(this.aLBUMLAGUUASDataSet.lagu);
             koneksi.Open();
 
 
-            SqlDataAdapter artisDataAdapter = new SqlDataAdapter(new SqlCommand("SELECT id_artis, nama_artis FROM dbo.artis", koneksi));
-            DataTable artisDataTable = new DataTable();
-            artisDataAdapter.Fill(artisDataTable);
-            cbxidartis.DataSource = artisDataTable;
-            cbxidartis.DisplayMember = "nama_artis";
-            cbxidartis.ValueMember = "id_artis";
+            SqlDataAdapter dataAdapter1 = new SqlDataAdapter(new SqlCommand("Select id_lagu, id_artis, id_produser, judul, durasi, genre from dbo.lagu", koneksi));
+            DataSet ds = new DataSet();
+            dataAdapter1.Fill(ds);
 
-            SqlDataAdapter produserDataAdapter = new SqlDataAdapter(new SqlCommand("SELECT id_produser, nama_produser FROM dbo.produser", koneksi));
-            DataTable produserDataTable = new DataTable();
-            produserDataAdapter.Fill(produserDataTable);
-            cbxidproduser.DataSource = produserDataTable;
-            cbxidproduser.DisplayMember = "nama_produser";
-            cbxidproduser.ValueMember = "id_produser";
+            this.customerBindingSource.DataSource = ds.Tables[0];
+            this.txtidlagu.DataBindings.Add(
+                new Binding("Text", this.customerBindingSource, "id_lagu", true));
+            this.cbxidartis.DataBindings.Add(
+                new Binding("Text", this.customerBindingSource, "id_artis", true));
+            this.cbxidproduser.DataBindings.Add(
+                new Binding("Text", this.customerBindingSource, "id_produser", true));
+            this.txtjudul.DataBindings.Add(
+                new Binding("Text", this.customerBindingSource, "judul", true));
+            this.txtdurasi.DataBindings.Add(
+                new Binding("Text", this.customerBindingSource, "durasi", true));
+            this.txtgenre.DataBindings.Add(
+                new Binding("Text", this.customerBindingSource, "genre", true));
 
             koneksi.Close();
 
@@ -66,6 +73,11 @@ namespace AlbumLagu
         }
 
         private void cbxidproduser_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bindingNavigator1_RefreshItems(object sender, EventArgs e)
         {
 
         }
@@ -113,6 +125,34 @@ namespace AlbumLagu
             judul = txtjudul.Text;
             durasi = txtdurasi.Text;
             genre = txtgenre.Text;
+
+            koneksi.Open();
+            string str = "INSERT INTO dbo.lagu (id_lagu, id_artis, id_produser, judul, durasi, genre) " +
+                         "VALUES (@IDlagu, @IDartis, @IDproduser, @jdl, @drs, @gnr)";
+            SqlCommand cmd = new SqlCommand(str, koneksi);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add(new SqlParameter("@IDlagu", idlagu));
+            cmd.Parameters.Add(new SqlParameter("@IDartis", idartis));
+            cmd.Parameters.Add(new SqlParameter("@IDproduser", idproduser));
+            cmd.Parameters.Add(new SqlParameter("@jdl", judul));
+            cmd.Parameters.Add(new SqlParameter("@drs", TimeSpan.Parse(durasi)));
+            cmd.Parameters.Add(new SqlParameter("@gnr", genre));
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error while saving data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                koneksi.Close();
+            }
+
+            refreshform();
         }
 
         private void refreshform()
