@@ -122,19 +122,26 @@ namespace AlbumLagu
         private void btnsave_Click(object sender, EventArgs e)
         {
             idlagu = txtidlagu.Text;
-            idartis = cbxidartis.SelectedValue.ToString();
-            idproduser = cbxidproduser.SelectedValue.ToString();
+            idartis = cbxidartis.Text;
+            idproduser = cbxidproduser.Text;
             judul = txtjudul.Text;
             durasi = txtdurasi.Text;
             genre = txtgenre.Text;
 
             koneksi.Open();
+            string strs = "select id_artis from dbo.artis where id_artis = @ia";
+            SqlCommand cm = new SqlCommand(strs, koneksi);
+            cm.CommandType = CommandType.Text;
+            cm.Parameters.Add(new SqlParameter("@ia", idartis));
+            SqlDataReader dr = cm.ExecuteReader();
+            dr.Close();
+
             string str = "INSERT INTO dbo.lagu (id_lagu, id_artis, id_produser, judul, durasi, genre) " +
-                         "VALUES (@IDlagu, @IDartis, @IDproduser, @jdl, @drs, @gnr)";
+                         "VALUES (@IDlagu, @ia, @IDproduser, @jdl, @drs, @gnr)";
             SqlCommand cmd = new SqlCommand(str, koneksi);
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.Add(new SqlParameter("@IDlagu", idlagu));
-            cmd.Parameters.Add(new SqlParameter("@IDartis", idartis));
+            cmd.Parameters.Add(new SqlParameter("@ia", idartis));
             cmd.Parameters.Add(new SqlParameter("@IDproduser", idproduser));
             cmd.Parameters.Add(new SqlParameter("@jdl", judul));
             cmd.Parameters.Add(new SqlParameter("@drs", TimeSpan.Parse(durasi)));

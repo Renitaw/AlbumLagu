@@ -33,8 +33,17 @@ namespace AlbumLagu
             tahunrilis = txttahunrilis.Text;
             genre = txtgenre.Text;
             koneksi.Open();
-            string str = "insert into dbo.album (id_album, nama_album, perusahaan, tahun_rilis, genre)" +
-                "values(@IDalbum, @namaalbum, @perusahaan, @tahunrilis, @genre)";
+
+            string strs = "select id_artis from dbo.artis where id_artis = @IDartis; select id_lagu from dbo.lagu where id_lagu = @IDlagu";
+            SqlCommand cm = new SqlCommand(strs, koneksi);
+            cm.CommandType = CommandType.Text;
+            cm.Parameters.Add(new SqlParameter("@IDartis", idartis));
+            cm.Parameters.Add(new SqlParameter("@IDlagu", idlagu));
+            SqlDataReader dr = cm.ExecuteReader();
+            dr.Close();
+
+            string str = "insert into dbo.album (id_album, nama_album, id_artis, id_lagu, perusahaan, tahun_rilis, genre)" +
+                "values(@IDalbum, @namaalbum, @IDartis, @IDlagu, @perusahaan, @tahunrilis, @genre)";
             SqlCommand cmd = new SqlCommand(str, koneksi);
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.Add(new SqlParameter("@IDalbum", idalbum));
@@ -42,8 +51,8 @@ namespace AlbumLagu
             cmd.Parameters.Add(new SqlParameter("@IDartis", idartis));
             cmd.Parameters.Add(new SqlParameter("@IDlagu", idlagu));
             cmd.Parameters.Add(new SqlParameter("@perusahaan", perusahaan));
-            cmd.Parameters.Add(new SqlParameter("tahunrilis", tahunrilis));
-            cmd.Parameters.Add(new SqlParameter("genre", genre));
+            cmd.Parameters.Add(new SqlParameter("@tahunrilis", tahunrilis));
+            cmd.Parameters.Add(new SqlParameter("@genre", genre));
             cmd.ExecuteNonQuery();
             koneksi.Close();
             MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -69,6 +78,8 @@ namespace AlbumLagu
             btnsave.Enabled = true;
             btnclear.Enabled = true;
             btnadd.Enabled = false;
+            idartiscbx();
+            idlagucbx();
         }
 
         private void btnback_Click(object sender, EventArgs e)
@@ -104,7 +115,7 @@ namespace AlbumLagu
             this.txtidalbum.DataBindings.Add(
                 new Binding("Text", this.customerBindingSource, "id_album", true));
             this.txtnamaalbum.DataBindings.Add(
-                new Binding("Text", this.customerBindingSource, "id_album", true));
+                new Binding("Text", this.customerBindingSource, "nama_album", true));
             this.cbxidartis.DataBindings.Add(
                 new Binding("Text", this.customerBindingSource, "id_artis", true));
             this.cbxidlagu.DataBindings.Add(
@@ -142,10 +153,9 @@ namespace AlbumLagu
             txtgenre.Enabled = false;
             btnsave.Enabled = false;
             btnclear.Enabled = false;
+            btnadd.Enabled = true;
             clearBinding();
             DataAlbum_Load();
-            idartiscbx();
-            idlagucbx();
         }
 
         private void idartiscbx()

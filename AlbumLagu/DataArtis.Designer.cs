@@ -48,7 +48,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtidartis = new System.Windows.Forms.TextBox();
             this.txtnamaartis = new System.Windows.Forms.TextBox();
             this.txtgenre = new System.Windows.Forms.TextBox();
             this.txtnotelepon = new System.Windows.Forms.TextBox();
@@ -58,6 +57,7 @@
             this.btnclear = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.btnback = new System.Windows.Forms.Button();
+            this.txtidartis = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -263,17 +263,6 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "No Telepon";
             // 
-            // txtidartis
-            // 
-            this.txtidartis.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtidartis.Location = new System.Drawing.Point(388, 4);
-            this.txtidartis.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtidartis.Name = "txtidartis";
-            this.txtidartis.Size = new System.Drawing.Size(377, 30);
-            this.txtidartis.TabIndex = 5;
-            // 
             // txtnamaartis
             // 
             this.txtnamaartis.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -375,6 +364,17 @@
             this.btnback.UseVisualStyleBackColor = false;
             this.btnback.Click += new System.EventHandler(this.btnback_Click);
             // 
+            // txtidartis
+            // 
+            this.txtidartis.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtidartis.Location = new System.Drawing.Point(388, 4);
+            this.txtidartis.Margin = new System.Windows.Forms.Padding(4);
+            this.txtidartis.Name = "txtidartis";
+            this.txtidartis.Size = new System.Drawing.Size(377, 30);
+            this.txtidartis.TabIndex = 5;
+            // 
             // DataArtis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -423,7 +423,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtidartis;
         private System.Windows.Forms.TextBox txtnamaartis;
         private System.Windows.Forms.TextBox txtgenre;
         private System.Windows.Forms.TextBox txtnotelepon;
@@ -433,5 +432,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnback;
         private System.Windows.Forms.DateTimePicker dttl;
+        private System.Windows.Forms.TextBox txtidartis;
     }
 }
